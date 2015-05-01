@@ -37,4 +37,9 @@ Vagrant::Config.run do |config|
     puppet.manifest_file = 'site.pp'
     puppet.module_path = 'puppet/modules'
   end
+
+end
+
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell", path: "after_provision.sh", privileged: false
 end

@@ -11,7 +11,7 @@ class baseconfig {
   class { 'mercurial': }
 
   exec { 'clone openjdk files':
-    command => "/usr/bin/hg clone http://hg.openjdk.java.net/jdk8/jdk8 jdk8";
+    command => "/usr/bin/hg clone http://hg.openjdk.java.net/jdk8/jdk8 jdk8 && chown -R vagrant:vagrant jdk8";
   }
 
   host { 'hostmachine':
