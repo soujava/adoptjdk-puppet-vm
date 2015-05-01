@@ -1,0 +1,2311 @@
+$ vagrant up
+There were warnings and/or errors while loading your Vagrantfile
+for the machine 'default'.
+
+Your Vagrantfile was written for an earlier version of Vagrant,
+and while Vagrant does the best it can to remain backwards
+compatible, there are some cases where things have changed
+significantly enough to warrant a message. These messages are
+shown below.
+
+Warnings:
+* `config.vm.customize` calls are VirtualBox-specific. If you're
+using any other provider, you'll have to use config.vm.provider in a
+v2 configuration block.
+
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu-12-32b'...
+==> default: Matching MAC address for NAT networking...
+==> default: Setting the name of the VM: vagrantopenjdk_default_1430510003354_51279
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 => 2222 (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+    default:
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default:
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if its present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 4.1.12
+    default: VirtualBox Version: 4.3
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => /opt/openjdk/vagrantopenjdk
+    default: /tmp/vagrant-puppet/modules-cccf0a44a93b1da20d1aabde563fb229 => /opt/openjdk/vagrantopenjdk/puppet/modules
+    default: /tmp/vagrant-puppet/manifests-846018e2aa141a5eb79a64b4015fc5f3 => /opt/openjdk/vagrantopenjdk/puppet/manifests
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: stdin: is not a tty
+==> default: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.vuN0AEa0CV --trustdb-name /etc/apt/trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver keyserver.ubuntu.com --recv 4BD6EC30
+==> default: gpg:
+==> default: requesting key 4BD6EC30 from hkp server keyserver.ubuntu.com
+==> default: gpg:
+==> default: key 4BD6EC30: public key "Puppet Labs Release Key (Puppet Labs Release Key) <info@puppetlabs.com>" imported
+==> default: gpg:
+==> default: key 4BD6EC30: public key "Puppet Labs Release Key (Puppet Labs Release Key) <info@puppetlabs.com>" imported
+==> default: gpg:
+==> default: no ultimately trusted keys found
+==> default: gpg:
+==> default: Total number processed: 2
+==> default: gpg:
+==> default:               imported: 2
+==> default:   (RSA: 2)
+==> default: Get:1 http://security.ubuntu.com precise-security Release.gpg [198 B]
+==> default: Get:2 http://security.ubuntu.com precise-security Release [54.3 kB]
+==> default: Hit http://archive.ubuntu.com precise Release.gpg
+==> default: Get:3 http://apt.puppetlabs.com lucid Release.gpg [876 B]
+==> default: Get:4 http://archive.ubuntu.com precise-updates Release.gpg [198 B]
+==> default: Get:5 http://apt.puppetlabs.com lucid Release [22.4 kB]
+==> default: Get:6 http://security.ubuntu.com precise-security/main Sources [127 kB]
+==> default: Hit http://archive.ubuntu.com precise Release
+==> default: Get:7 http://archive.ubuntu.com precise-updates Release [196 kB]
+==> default: Get:8 http://apt.puppetlabs.com lucid/main Sources [80.2 kB]
+==> default: Get:9 http://security.ubuntu.com precise-security/universe Sources [35.6 kB]
+==> default: Get:10 http://security.ubuntu.com precise-security/main i386 Packages [541 kB]
+==> default: Get:11 http://apt.puppetlabs.com lucid/main i386 Packages [96.7 kB]
+==> default: Ign http://apt.puppetlabs.com lucid/main TranslationIndex
+==> default: Get:12 http://archive.ubuntu.com precise/main Sources [934 kB]
+==> default: Get:13 http://security.ubuntu.com precise-security/universe i386 Packages [124 kB]
+==> default: Get:14 http://security.ubuntu.com precise-security/main TranslationIndex [208 B]
+==> default: Get:15 http://security.ubuntu.com precise-security/universe TranslationIndex [205 B]
+==> default: Hit http://security.ubuntu.com precise-security/main Translation-en
+==> default: Hit http://security.ubuntu.com precise-security/universe Translation-en
+==> default: Ign http://apt.puppetlabs.com lucid/main Translation-en_US
+==> default: Ign http://apt.puppetlabs.com lucid/main Translation-en
+==> default: Get:16 http://archive.ubuntu.com precise/universe Sources [5,019 kB]
+==> default: Hit http://archive.ubuntu.com precise/main i386 Packages
+==> default: Hit http://archive.ubuntu.com precise/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com precise/main TranslationIndex
+==> default: Hit http://archive.ubuntu.com precise/universe TranslationIndex
+==> default: Get:17 http://archive.ubuntu.com precise-updates/main Sources [488 kB]
+==> default: Get:18 http://archive.ubuntu.com precise-updates/universe Sources [113 kB]
+==> default: Get:19 http://archive.ubuntu.com precise-updates/main i386 Packages [935 kB]
+==> default: Get:20 http://archive.ubuntu.com precise-updates/universe i386 Packages [269 kB]
+==> default: Get:21 http://archive.ubuntu.com precise-updates/main TranslationIndex [10.6 kB]
+==> default: Get:22 http://archive.ubuntu.com precise-updates/universe TranslationIndex [8,333 B]
+==> default: Hit http://archive.ubuntu.com precise/main Translation-en
+==> default: Hit http://archive.ubuntu.com precise/universe Translation-en
+==> default: Hit http://archive.ubuntu.com precise-updates/main Translation-en
+==> default: Hit http://archive.ubuntu.com precise-updates/universe Translation-en
+==> default: Fetched 9,055 kB in 31s (289 kB/s)
+==> default: Reading package lists...
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: The following extra packages will be installed:
+==> default:   facter hiera libjson-ruby puppet-common ruby-json virt-what
+==> default: Suggested packages:
+==> default:   puppet-el vim-puppet ruby-selinux libselinux-ruby1.8 librrd-ruby1.9.1
+==> default:   librrd-ruby1.8
+==> default: The following NEW packages will be installed:
+==> default:   hiera libjson-ruby ruby-json virt-what
+==> default: The following packages will be upgraded:
+==> default:   facter puppet puppet-common
+==> default: 3 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+==> default: Need to get 1,862 kB of archives.
+==> default: After this operation, 9,008 kB of additional disk space will be used.
+==> default: Get:1 http://archive.ubuntu.com/ubuntu/ precise/universe virt-what i386 1.11-1 [12.8 kB]
+==> default: Get:2 http://archive.ubuntu.com/ubuntu/ precise/universe ruby-json i386 1.6.3-1 [72.4 kB]
+==> default: Get:3 http://apt.puppetlabs.com/ lucid/main facter all 2.4.3-1puppetlabs1 [87.7 kB]
+==> default: Get:4 http://archive.ubuntu.com/ubuntu/ precise/universe libjson-ruby all 1.6.3-1 [1,588 B]
+==> default: Get:5 http://apt.puppetlabs.com/ lucid/main hiera all 1.3.4-1puppetlabs1 [12.9 kB]
+==> default: Get:6 http://apt.puppetlabs.com/ lucid/main puppet-common all 3.7.5-1puppetlabs1 [1,666 kB]
+==> default: Get:7 http://apt.puppetlabs.com/ lucid/main puppet all 3.7.5-1puppetlabs1 [9,642 B]
+==> default:
+==> default: puppet-common:i386
+==> default:  conflicts with
+==> default: puppet:i386
+==> default:
+==> default: puppet:i386
+==> default:  conflicts with
+==> default: puppet-common:i386
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Fetched 1,862 kB in 2s (821 kB/s)
+==> default: Selecting previously unselected package virt-what.
+==> default: (Reading database ...
+==> default: 66887 files and directories currently installed.)
+==> default: Unpacking virt-what (from .../virt-what_1.11-1_i386.deb) ...
+==> default: Preparing to replace facter 1.6.5-1ubuntu1.2 (using .../facter_2.4.3-1puppetlabs1_all.deb) ...
+==> default: Unpacking replacement facter ...
+==> default: Selecting previously unselected package ruby-json.
+==> default: Unpacking ruby-json (from .../ruby-json_1.6.3-1_i386.deb) ...
+==> default: Selecting previously unselected package libjson-ruby.
+==> default: Unpacking libjson-ruby (from .../libjson-ruby_1.6.3-1_all.deb) ...
+==> default: Selecting previously unselected package hiera.
+==> default: Unpacking hiera (from .../hiera_1.3.4-1puppetlabs1_all.deb) ...
+==> default: Processing triggers for man-db ...
+==> default: dpkg: puppet-common: dependency problems, but removing anyway as you requested:
+==> default:  puppet depends on puppet-common (= 2.7.11-1ubuntu2.7).
+==> default: (Reading database ...
+==> default: 67031 files and directories currently installed.)
+==> default: Removing puppet-common ...
+==> default: Processing triggers for man-db ...
+==> default: (Reading database ...
+==> default: 66046 files and directories currently installed.)
+==> default: Preparing to replace puppet 2.7.11-1ubuntu2.7 (using .../puppet_3.7.5-1puppetlabs1_all.deb) ...
+==> default: Unpacking replacement puppet ...
+==> default: Selecting previously unselected package puppet-common.
+==> default: Unpacking puppet-common (from .../puppet-common_3.7.5-1puppetlabs1_all.deb) ...
+==> default: Processing triggers for ureadahead ...
+==> default: Processing triggers for man-db ...
+==> default: Setting up ruby-json (1.6.3-1) ...
+==> default: Setting up libjson-ruby (1.6.3-1) ...
+==> default: Setting up hiera (1.3.4-1puppetlabs1) ...
+==> default: Setting up virt-what (1.11-1) ...
+==> default: Setting up facter (2.4.3-1puppetlabs1) ...
+==> default: Setting up puppet-common (3.7.5-1puppetlabs1) ...
+==> default: Installing new version of config file /etc/puppet/puppet.conf ...
+==> default: Installing new version of config file /etc/logcheck/ignore.d.server/puppet-common ...
+==> default: Setting up puppet (3.7.5-1puppetlabs1) ...
+==> default: Installing new version of config file /etc/default/puppet ...
+==> default: Installing new version of config file /etc/init.d/puppet ...
+==> default:  * Starting puppet agent
+==> default: puppet not configured to start, please edit /etc/default/puppet to enable
+==> default:    ...done.
+==> default: Warning: Setting templatedir is deprecated. See http://links.puppetlabs.com/env-settings-deprecations
+==> default:    (at /usr/lib/ruby/vendor_ruby/puppet/settings.rb:1139:in `issue_deprecation_warning')
+==> default: Notice: Preparing to install into /etc/puppet/modules ...
+==> default: Notice: Downloading from https://forgeapi.puppetlabs.com ...
+==> default: Notice: Installing -- do not interrupt ...
+==> default: /etc/puppet/modules
+==> default: └── jgoettsch-mercurial (v0.2.0)
+==> default: Warning: Setting templatedir is deprecated. See http://links.puppetlabs.com/env-settings-deprecations
+==> default:    (at /usr/lib/ruby/vendor_ruby/puppet/settings.rb:1139:in `issue_deprecation_warning')
+==> default: Notice: Preparing to install into /etc/puppet/modules ...
+==> default: Notice: Downloading from https://forgeapi.puppetlabs.com ...
+==> default: Notice: Installing -- do not interrupt ...
+==> default: /etc/puppet/modules
+==> default: └─┬ puppetlabs-java (v1.3.0)
+==> default:   └── puppetlabs-stdlib (v4.6.0)
+==> default: Running provisioner: puppet...
+==> default: Running Puppet with site.pp...
+==> default: stdin: is not a tty
+==> default: Warning: Setting templatedir is deprecated. See http://links.puppetlabs.com/env-settings-deprecations
+==> default:    (at /usr/lib/ruby/vendor_ruby/puppet/settings.rb:1139:in `issue_deprecation_warning')
+==> default: Warning: Config file /etc/puppet/hiera.yaml not found, using Hiera defaults
+==> default: Notice: Compiled catalog for ubuntu12.openjdk.org in environment production in 0.40 seconds
+==> default: Notice: /Stage[pre]/Mercurial/Package[mercurial]/ensure: ensure changed 'purged' to 'present'
+==> default: Notice: /Stage[pre]/Baseconfig/Exec[clone openjdk files]/returns: executed successfully
+==> default: Notice: /Stage[pre]/Baseconfig/Exec[apt-get update]/returns: executed successfully
+==> default: Notice: /Stage[pre]/Baseconfig/Host[hostmachine]/ensure: created
+==> default: Notice: /Stage[main]/Java/Package[java]/ensure: ensure changed 'purged' to 'present'
+==> default: Notice: Finished catalog run in 116.80 seconds
+==> default: Running provisioner: shell...
+    default: Running: /var/folders/qt/hljwlzz97xq78kxqzjxqlr540000gn/T/vagrant-shell20150501-5014-hzn0pn.sh
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: build-essential is already the newest version.
+==> default: build-essential set to manually installed.
+==> default: libx11-dev is already the newest version.
+==> default: libx11-dev set to manually installed.
+==> default: libxt-dev is already the newest version.
+==> default: libxt-dev set to manually installed.
+==> default: The following extra packages will be installed:
+==> default:   comerr-dev krb5-multidev libgcrypt11-dev libgnutls-dev libgnutls-openssl27
+==> default:   libgnutlsxx27 libgpg-error-dev libgssrpc4 libkadm5clnt-mit8 libkadm5srv-mit8
+==> default:   libkdb5-6 libkrb5-dev libp11-kit-dev libtasn1-3-dev libxfixes-dev libxi-dev
+==> default:   x11proto-fixes-dev x11proto-record-dev x11proto-render-dev x11proto-xext-dev
+==> default:   zlib1g-dev
+==> default: Suggested packages:
+==> default:   distcc doc-base krb5-doc libasound2-doc libgcrypt11-doc gnutls-doc
+==> default:   gnutls-bin krb5-user
+==> default: The following NEW packages will be installed:
+==> default:   ccache comerr-dev krb5-multidev libasound2-dev libcups2-dev libfreetype6-dev
+==> default:   libgcrypt11-dev libgnutls-dev libgnutls-openssl27 libgnutlsxx27
+==> default:   libgpg-error-dev libgssrpc4 libkadm5clnt-mit8 libkadm5srv-mit8 libkdb5-6
+==> default:   libkrb5-dev libp11-kit-dev libtasn1-3-dev libxext-dev libxfixes-dev
+==> default:   libxi-dev libxrender-dev libxtst-dev unzip x11proto-fixes-dev
+==> default:   x11proto-record-dev x11proto-render-dev x11proto-xext-dev zip zlib1g-dev
+==> default: 0 upgraded, 30 newly installed, 0 to remove and 0 not upgraded.
+==> default: Need to get 4,308 kB of archives.
+==> default: After this operation, 15.3 MB of additional disk space will be used.
+==> default: Get:1 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgssrpc4 i386 1.10+dfsg~beta1-2ubuntu0.6 [57.5 kB]
+==> default: Get:2 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkadm5clnt-mit8 i386 1.10+dfsg~beta1-2ubuntu0.6 [38.0 kB]
+==> default: Get:3 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkdb5-6 i386 1.10+dfsg~beta1-2ubuntu0.6 [37.5 kB]
+==> default: Get:4 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkadm5srv-mit8 i386 1.10+dfsg~beta1-2ubuntu0.6 [54.4 kB]
+==> default: Get:5 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgnutls-openssl27 i386 2.12.14-5ubuntu3.9 [21.6 kB]
+==> default: Get:6 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgnutlsxx27 i386 2.12.14-5ubuntu3.9 [23.4 kB]
+==> default: Get:7 http://archive.ubuntu.com/ubuntu/ precise/main ccache i386 3.1.6-1 [74.1 kB]
+==> default: Get:8 http://archive.ubuntu.com/ubuntu/ precise-updates/main comerr-dev i386 2.1-1.42-1ubuntu2.2 [42.9 kB]
+==> default: Get:9 http://archive.ubuntu.com/ubuntu/ precise-updates/main krb5-multidev i386 1.10+dfsg~beta1-2ubuntu0.6 [125 kB]
+==> default: Get:10 http://archive.ubuntu.com/ubuntu/ precise-updates/main libasound2-dev i386 1.0.25-1ubuntu10.2 [70.2 kB]
+==> default: Get:11 http://archive.ubuntu.com/ubuntu/ precise/main libgpg-error-dev i386 1.10-2ubuntu1 [23.1 kB]
+==> default: Get:12 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgcrypt11-dev i386 1.5.0-3ubuntu0.4 [364 kB]
+==> default: Get:13 http://archive.ubuntu.com/ubuntu/ precise/main zlib1g-dev i386 1:1.2.3.4.dfsg-3ubuntu4 [162 kB]
+==> default: Get:14 http://archive.ubuntu.com/ubuntu/ precise-updates/main libtasn1-3-dev i386 2.10-1ubuntu1.3 [355 kB]
+==> default: Get:15 http://archive.ubuntu.com/ubuntu/ precise/main libp11-kit-dev i386 0.12-2ubuntu1 [45.6 kB]
+==> default: Get:16 http://archive.ubuntu.com/ubuntu/ precise-updates/main libgnutls-dev i386 2.12.14-5ubuntu3.9 [532 kB]
+==> default: Get:17 http://archive.ubuntu.com/ubuntu/ precise-updates/main libkrb5-dev i386 1.10+dfsg~beta1-2ubuntu0.6 [11.0 kB]
+==> default: Get:18 http://archive.ubuntu.com/ubuntu/ precise-updates/main libcups2-dev i386 1.5.3-0ubuntu8.6 [239 kB]
+==> default: Get:19 http://archive.ubuntu.com/ubuntu/ precise-updates/main libfreetype6-dev i386 2.4.8-1ubuntu2.2 [780 kB]
+==> default: Get:20 http://archive.ubuntu.com/ubuntu/ precise-updates/main x11proto-xext-dev all 7.3.0-1~precise2 [277 kB]
+==> default: Get:21 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxext-dev i386 2:1.3.0-3ubuntu0.2 [160 kB]
+==> default: Get:22 http://archive.ubuntu.com/ubuntu/ precise/main x11proto-fixes-dev all 1:5.0-2ubuntu1 [15.5 kB]
+==> default: Get:23 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxfixes-dev i386 1:5.0-4ubuntu4.4 [13.4 kB]
+==> default: Get:24 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxi-dev i386 2:1.7.1.901-1ubuntu1~precise3 [203 kB]
+==> default: Get:25 http://archive.ubuntu.com/ubuntu/ precise/main x11proto-render-dev all 2:0.11.1-2 [20.1 kB]
+==> default: Get:26 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxrender-dev i386 1:0.9.6-2ubuntu0.2 [26.8 kB]
+==> default: Get:27 http://archive.ubuntu.com/ubuntu/ precise/main x11proto-record-dev all 1.14.1-2 [31.9 kB]
+==> default: Get:28 http://archive.ubuntu.com/ubuntu/ precise-updates/main libxtst-dev i386 2:1.2.0-4ubuntu0.1 [62.9 kB]
+==> default: Get:29 http://archive.ubuntu.com/ubuntu/ precise-updates/main unzip i386 6.0-4ubuntu2.3 [184 kB]
+==> default: Get:30 http://archive.ubuntu.com/ubuntu/ precise/main zip i386 3.0-4 [256 kB]
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Fetched 4,308 kB in 10s (426 kB/s)
+==> default: Selecting previously unselected package libgssrpc4.
+==> default: (Reading database ...
+==> default: 72278 files and directories currently installed.)
+==> default: Unpacking libgssrpc4 (from .../libgssrpc4_1.10+dfsg~beta1-2ubuntu0.6_i386.deb) ...
+==> default: Selecting previously unselected package libkadm5clnt-mit8.
+==> default: Unpacking libkadm5clnt-mit8 (from .../libkadm5clnt-mit8_1.10+dfsg~beta1-2ubuntu0.6_i386.deb) ...
+==> default: Selecting previously unselected package libkdb5-6.
+==> default: Unpacking libkdb5-6 (from .../libkdb5-6_1.10+dfsg~beta1-2ubuntu0.6_i386.deb) ...
+==> default: Selecting previously unselected package libkadm5srv-mit8.
+==> default: Unpacking libkadm5srv-mit8 (from .../libkadm5srv-mit8_1.10+dfsg~beta1-2ubuntu0.6_i386.deb) ...
+==> default: Selecting previously unselected package libgnutls-openssl27.
+==> default: Unpacking libgnutls-openssl27 (from .../libgnutls-openssl27_2.12.14-5ubuntu3.9_i386.deb) ...
+==> default: Selecting previously unselected package libgnutlsxx27.
+==> default: Unpacking libgnutlsxx27 (from .../libgnutlsxx27_2.12.14-5ubuntu3.9_i386.deb) ...
+==> default: Selecting previously unselected package ccache.
+==> default: Unpacking ccache (from .../ccache_3.1.6-1_i386.deb) ...
+==> default: Selecting previously unselected package comerr-dev.
+==> default: Unpacking comerr-dev (from .../comerr-dev_2.1-1.42-1ubuntu2.2_i386.deb) ...
+==> default: Selecting previously unselected package krb5-multidev.
+==> default: Unpacking krb5-multidev (from .../krb5-multidev_1.10+dfsg~beta1-2ubuntu0.6_i386.deb) ...
+==> default: Selecting previously unselected package libasound2-dev.
+==> default: Unpacking libasound2-dev (from .../libasound2-dev_1.0.25-1ubuntu10.2_i386.deb) ...
+==> default: Selecting previously unselected package libgpg-error-dev.
+==> default: Unpacking libgpg-error-dev (from .../libgpg-error-dev_1.10-2ubuntu1_i386.deb) ...
+==> default: Selecting previously unselected package libgcrypt11-dev.
+==> default: Unpacking libgcrypt11-dev (from .../libgcrypt11-dev_1.5.0-3ubuntu0.4_i386.deb) ...
+==> default: Selecting previously unselected package zlib1g-dev.
+==> default: Unpacking zlib1g-dev (from .../zlib1g-dev_1%3a1.2.3.4.dfsg-3ubuntu4_i386.deb) ...
+==> default: Selecting previously unselected package libtasn1-3-dev.
+==> default: Unpacking libtasn1-3-dev (from .../libtasn1-3-dev_2.10-1ubuntu1.3_i386.deb) ...
+==> default: Selecting previously unselected package libp11-kit-dev.
+==> default: Unpacking libp11-kit-dev (from .../libp11-kit-dev_0.12-2ubuntu1_i386.deb) ...
+==> default: Selecting previously unselected package libgnutls-dev.
+==> default: Unpacking libgnutls-dev (from .../libgnutls-dev_2.12.14-5ubuntu3.9_i386.deb) ...
+==> default: Selecting previously unselected package libkrb5-dev.
+==> default: Unpacking libkrb5-dev (from .../libkrb5-dev_1.10+dfsg~beta1-2ubuntu0.6_i386.deb) ...
+==> default: Selecting previously unselected package libcups2-dev.
+==> default: Unpacking libcups2-dev (from .../libcups2-dev_1.5.3-0ubuntu8.6_i386.deb) ...
+==> default: Selecting previously unselected package libfreetype6-dev.
+==> default: Unpacking libfreetype6-dev (from .../libfreetype6-dev_2.4.8-1ubuntu2.2_i386.deb) ...
+==> default: Selecting previously unselected package x11proto-xext-dev.
+==> default: Unpacking x11proto-xext-dev (from .../x11proto-xext-dev_7.3.0-1~precise2_all.deb) ...
+==> default: Selecting previously unselected package libxext-dev.
+==> default: Unpacking libxext-dev (from .../libxext-dev_2%3a1.3.0-3ubuntu0.2_i386.deb) ...
+==> default: Selecting previously unselected package x11proto-fixes-dev.
+==> default: Unpacking x11proto-fixes-dev (from .../x11proto-fixes-dev_1%3a5.0-2ubuntu1_all.deb) ...
+==> default: Selecting previously unselected package libxfixes-dev.
+==> default: Unpacking libxfixes-dev (from .../libxfixes-dev_1%3a5.0-4ubuntu4.4_i386.deb) ...
+==> default: Selecting previously unselected package libxi-dev.
+==> default: Unpacking libxi-dev (from .../libxi-dev_2%3a1.7.1.901-1ubuntu1~precise3_i386.deb) ...
+==> default: Selecting previously unselected package x11proto-render-dev.
+==> default: Unpacking x11proto-render-dev (from .../x11proto-render-dev_2%3a0.11.1-2_all.deb) ...
+==> default: Selecting previously unselected package libxrender-dev.
+==> default: Unpacking libxrender-dev (from .../libxrender-dev_1%3a0.9.6-2ubuntu0.2_i386.deb) ...
+==> default: Selecting previously unselected package x11proto-record-dev.
+==> default: Unpacking x11proto-record-dev (from .../x11proto-record-dev_1.14.1-2_all.deb) ...
+==> default: Selecting previously unselected package libxtst-dev.
+==> default: Unpacking libxtst-dev (from .../libxtst-dev_2%3a1.2.0-4ubuntu0.1_i386.deb) ...
+==> default: Selecting previously unselected package unzip.
+==> default: Unpacking unzip (from .../unzip_6.0-4ubuntu2.3_i386.deb) ...
+==> default: Selecting previously unselected package zip.
+==> default: Unpacking zip (from .../archives/zip_3.0-4_i386.deb) ...
+==> default: Processing triggers for man-db ...
+==> default: Processing triggers for install-info ...
+==> default: Setting up libgssrpc4 (1.10+dfsg~beta1-2ubuntu0.6) ...
+==> default: Setting up libkadm5clnt-mit8 (1.10+dfsg~beta1-2ubuntu0.6) ...
+==> default: Setting up libkdb5-6 (1.10+dfsg~beta1-2ubuntu0.6) ...
+==> default: Setting up libkadm5srv-mit8 (1.10+dfsg~beta1-2ubuntu0.6) ...
+==> default: Setting up libgnutls-openssl27 (2.12.14-5ubuntu3.9) ...
+==> default: Setting up libgnutlsxx27 (2.12.14-5ubuntu3.9) ...
+==> default: Setting up ccache (3.1.6-1) ...
+==> default: Updating symlinks in /usr/lib/ccache ...
+==> default: Setting up comerr-dev (2.1-1.42-1ubuntu2.2) ...
+==> default: Setting up krb5-multidev (1.10+dfsg~beta1-2ubuntu0.6) ...
+==> default: Setting up libasound2-dev (1.0.25-1ubuntu10.2) ...
+==> default: Setting up libgpg-error-dev (1.10-2ubuntu1) ...
+==> default: Setting up libgcrypt11-dev (1.5.0-3ubuntu0.4) ...
+==> default: Setting up zlib1g-dev (1:1.2.3.4.dfsg-3ubuntu4) ...
+==> default: Setting up libtasn1-3-dev (2.10-1ubuntu1.3) ...
+==> default: Setting up libp11-kit-dev (0.12-2ubuntu1) ...
+==> default: Setting up libgnutls-dev (2.12.14-5ubuntu3.9) ...
+==> default: Setting up libkrb5-dev (1.10+dfsg~beta1-2ubuntu0.6) ...
+==> default: Setting up libcups2-dev (1.5.3-0ubuntu8.6) ...
+==> default: Setting up libfreetype6-dev (2.4.8-1ubuntu2.2) ...
+==> default: Setting up x11proto-xext-dev (7.3.0-1~precise2) ...
+==> default: Setting up libxext-dev (2:1.3.0-3ubuntu0.2) ...
+==> default: Setting up x11proto-fixes-dev (1:5.0-2ubuntu1) ...
+==> default: Setting up libxfixes-dev (1:5.0-4ubuntu4.4) ...
+==> default: Setting up libxi-dev (2:1.7.1.901-1ubuntu1~precise3) ...
+==> default: Setting up x11proto-render-dev (2:0.11.1-2) ...
+==> default: Setting up libxrender-dev (1:0.9.6-2ubuntu0.2) ...
+==> default: Setting up x11proto-record-dev (1.14.1-2) ...
+==> default: Setting up libxtst-dev (2:1.2.0-4ubuntu0.1) ...
+==> default: Setting up unzip (6.0-4ubuntu2.3) ...
+==> default: Setting up zip (3.0-4) ...
+==> default: Processing triggers for libc-bin ...
+==> default: ldconfig deferred processing now taking place
+==> default: # Repositories:  corba jaxp jaxws langtools jdk hotspot nashorn
+==> default: Waiting 5 secs before spawning next background command.
+==> default: Waiting 5 secs before spawning next background command.
+==> default: Waiting 5 secs before spawning next background command.
+==> default:                 corba:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/corba corba
+==> default:                 corba:   requesting all changes
+==> default:                 corba:   adding changesets
+==> default:                 corba:   adding manifests
+==> default:                 corba:   adding file changes
+==> default:                 corba:   added 581 changesets with 3574 changes to 1388 files
+==> default:                 corba:   updating to branch default
+==> default:                 corba:   1194 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default:               nashorn:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/nashorn nashorn
+==> default:               nashorn:   requesting all changes
+==> default:               nashorn:   adding changesets
+==> default:               nashorn:   adding manifests
+==> default:               nashorn:   adding file changes
+==> default:               nashorn:   added 726 changesets with 5938 changes to 2096 files
+==> default:               nashorn:   updating to branch default
+==> default:               nashorn:   1980 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default:                  jaxp:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/jaxp jaxp
+==> default:                  jaxp:   requesting all changes
+==> default:                  jaxp:   adding changesets
+==> default:                  jaxp:   adding manifests
+==> default:                  jaxp:   adding file changes
+==> default:                  jaxp:   added 585 changesets with 6288 changes to 4230 files
+==> default:                  jaxp:   updating to branch default
+==> default:                  jaxp:   2078 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default:                 jaxws:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/jaxws jaxws
+==> default:                 jaxws:   requesting all changes
+==> default:                 jaxws:   adding changesets
+==> default:                 jaxws:   adding manifests
+==> default:                 jaxws:   adding file changes
+==> default:                 jaxws:   added 469 changesets with 12417 changes to 6727 files
+==> default:                 jaxws:   updating to branch default
+==> default:                 jaxws:   3710 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default:             langtools:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/langtools langtools
+==> default:             langtools:   requesting all changes
+==> default:             langtools:   adding changesets
+==> default:             langtools:   adding manifests
+==> default:             langtools:   adding file changes
+==> default:             langtools:   added 2255 changesets with 20630 changes to 6951 files
+==> default:             langtools:   updating to branch default
+==> default:             langtools:   6171 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default:               hotspot:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/hotspot hotspot
+==> default:               hotspot:   requesting all changes
+==> default:               hotspot:   adding changesets
+==> default:               hotspot:   adding manifests
+==> default:               hotspot:   adding file changes
+==> default:               hotspot:   added 5821 changesets with 34543 changes to 5035 files
+==> default:               hotspot:   updating to branch default
+==> default:               hotspot:   4153 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default:                   jdk:   hg clone http://hg.openjdk.java.net/jdk8/jdk8/jdk jdk
+==> default:                   jdk:   requesting all changes
+==> default:                   jdk:   adding changesets
+==> default:                   jdk:   adding manifests
+==> default:                   jdk:   adding file changes
+==> default:                   jdk:   added 9108 changesets with 89618 changes to 26411 files
+==> default:                   jdk:   updating to branch default
+==> default:                   jdk:   22175 files updated, 0 files merged, 0 files removed, 0 files unresolved
+==> default: # Repositories:  . ./corba ./hotspot ./jaxp ./jaxws ./jdk ./langtools ./nashorn
+==> default:               ./corba:   cd ./corba && hg pull -u
+==> default:               ./corba:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/corba
+==> default:               ./corba:   searching for changes
+==> default:               ./corba:   no changes found
+==> default:                     .:   cd . && hg pull -u
+==> default:                     .:   pulling from http://hg.openjdk.java.net/jdk8/jdk8
+==> default:                     .:   searching for changes
+==> default:                     .:   no changes found
+==> default:             ./hotspot:   cd ./hotspot && hg pull -u
+==> default:             ./hotspot:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/hotspot
+==> default:             ./hotspot:   searching for changes
+==> default:             ./hotspot:   no changes found
+==> default:                ./jaxp:   cd ./jaxp && hg pull -u
+==> default:                ./jaxp:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/jaxp
+==> default:                ./jaxp:   searching for changes
+==> default:                ./jaxp:   no changes found
+==> default:               ./jaxws:   cd ./jaxws && hg pull -u
+==> default:               ./jaxws:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/jaxws
+==> default:               ./jaxws:   searching for changes
+==> default:               ./jaxws:   no changes found
+==> default:             ./nashorn:   cd ./nashorn && hg pull -u
+==> default:             ./nashorn:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/nashorn
+==> default:             ./nashorn:   searching for changes
+==> default:             ./nashorn:   no changes found
+==> default:           ./langtools:   cd ./langtools && hg pull -u
+==> default:           ./langtools:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/langtools
+==> default:           ./langtools:   searching for changes
+==> default:           ./langtools:   no changes found
+==> default:                 ./jdk:   cd ./jdk && hg pull -u
+==> default:                 ./jdk:   pulling from http://hg.openjdk.java.net/jdk8/jdk8/jdk
+==> default:                 ./jdk:   searching for changes
+==> default:                 ./jdk:   no changes found
+==> default: Waiting 5 secs before spawning next background command.
+==> default: Running generated-configure.sh
+==> default: configure: Configuration created at Fri May  1 20:04:20 UTC 2015.
+==> default: configure: configure script generated at timestamp 1389186094.
+==> default: checking for basename...
+==> default: /usr/bin/basename
+==> default: checking for bash...
+==> default: /bin/bash
+==> default: checking for cat...
+==> default: /bin/cat
+==> default: checking for chmod...
+==> default: /bin/chmod
+==> default: checking for cmp...
+==> default: /usr/bin/cmp
+==> default: checking for comm...
+==> default: /usr/bin/comm
+==> default: checking for cp...
+==> default: /bin/cp
+==> default: checking for cpio...
+==> default: /bin/cpio
+==> default: checking for cut...
+==> default: /usr/bin/cut
+==> default: checking for date...
+==> default: /bin/date
+==> default: checking for gdiff...
+==> default: no
+==> default: checking for diff...
+==> default: /usr/bin/diff
+==> default: checking for dirname...
+==> default: /usr/bin/dirname
+==> default: checking for echo...
+==> default: /bin/echo
+==> default: checking for expr...
+==> default: /usr/bin/expr
+==> default: checking for file...
+==> default: /usr/bin/file
+==> default: checking for find...
+==> default: /usr/bin/find
+==> default: checking for head...
+==> default: /usr/bin/head
+==> default: checking for ln...
+==> default: /bin/ln
+==> default: checking for ls...
+==> default: /bin/ls
+==> default: checking for mkdir...
+==> default: /bin/mkdir
+==> default: checking for mktemp...
+==> default: /bin/mktemp
+==> default: checking for mv...
+==> default: /bin/mv
+==> default: checking for printf...
+==> default: /usr/bin/printf
+==> default: checking for rm...
+==> default: /bin/rm
+==> default: checking for sh...
+==> default: /bin/sh
+==> default: checking for sort...
+==> default: /usr/bin/sort
+==> default: checking for tail...
+==> default: /usr/bin/tail
+==> default: checking for tar...
+==> default: /bin/tar
+==> default: checking for tee...
+==> default: /usr/bin/tee
+==> default: checking for touch...
+==> default: /usr/bin/touch
+==> default: checking for tr...
+==> default: /usr/bin/tr
+==> default: checking for uname...
+==> default: /bin/uname
+==> default: checking for uniq...
+==> default: /usr/bin/uniq
+==> default: checking for wc...
+==> default: /usr/bin/wc
+==> default: checking for which...
+==> default: /usr/bin/which
+==> default: checking for xargs...
+==> default: /usr/bin/xargs
+==> default: checking for gawk... no
+==> default: checking for mawk... mawk
+==> default: checking for grep that handles long lines and -e... /bin/grep
+==> default: checking for egrep...
+==> default: /bin/grep -E
+==> default: checking for fgrep...
+==> default: /bin/grep -F
+==> default: checking for a sed that does not truncate output...
+==> default: /bin/sed
+==> default: checking for nawk...
+==> default: /usr/bin/nawk
+==> default: checking for cygpath...
+==> default: no
+==> default: checking for readlink...
+==> default: /bin/readlink
+==> default: checking for df...
+==> default: /bin/df
+==> default: checking for SetFile...
+==> default: no
+==> default: checking build system type...
+==> default: i686-pc-linux-gnu
+==> default: checking host system type...
+==> default: i686-pc-linux-gnu
+==> default: checking target system type...
+==> default: i686-pc-linux-gnu
+==> default: checking openjdk-build os-cpu...
+==> default: linux-x86
+==> default: checking openjdk-target os-cpu...
+==> default: linux-x86
+==> default: checking compilation type...
+==> default: native
+==> default: checking for presence of closed sources...
+==> default: no
+==> default: checking if closed source is suppressed (openjdk-only)... no
+==> default: checking which variant of the JDK to build... normal
+==> default: checking which variants of the JVM to build...
+==> default: server
+==> default: checking which debug level to use...
+==> default: release
+==> default: checking what configuration name to use...
+==> default: linux-x86-normal-server-release
+==> default: checking for apt-get...
+==> default: apt-get
+==> default: checking for gmake...
+==> default: no
+==> default: checking for make...
+==> default: /usr/bin/make
+==> default: configure: Testing potential make at /usr/bin/make, found using make in PATH
+==> default: configure: Resolving FOUND_MAKE (as /usr/bin/make) failed, using /usr/bin/make directly.
+==> default: configure: Using GNU make 3.81 (or later) at /usr/bin/make (version: GNU Make 3.81)
+==> default: checking if find supports -delete...
+==> default: yes
+==> default: checking for unzip...
+==> default: /usr/bin/unzip
+==> default: checking for zip...
+==> default: /usr/bin/zip
+==> default: checking for ldd...
+==> default: /usr/bin/ldd
+==> default: checking for otool...
+==> default: no
+==> default: checking for readelf...
+==> default: /usr/bin/readelf
+==> default: checking for hg...
+==> default: /usr/bin/hg
+==> default: checking for stat...
+==> default: /usr/bin/stat
+==> default: checking for time...
+==> default: /usr/bin/time
+==> default: checking for pkg-config...
+==> default: no
+==> default: checking for 7z...
+==> default: no
+==> default: checking for unzip...
+==> default: unzip
+==> default: checking for wget...
+==> default: wget
+==> default: checking headful support...
+==> default: include support for both headful and headless
+==> default: checking for javac...
+==> default: /usr/bin/javac
+==> default: checking for java...
+==> default: /usr/bin/java
+==> default: configure: Found potential Boot JDK using java(c) in PATH
+==> default: checking for Boot JDK...
+==> default: /usr/lib/jvm/java-7-openjdk-i386
+==> default: checking Boot JDK version...
+==> default: java version "1.7.0_79" OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-0ubuntu0.12.04.1) OpenJDK Client VM (build 24.79-b02, mixed mode, sharing)
+==> default: checking for java in Boot JDK...
+==> default: ok
+==> default: checking for javac in Boot JDK...
+==> default: ok
+==> default: checking for javah in Boot JDK...
+==> default: ok
+==> default: checking for javap in Boot JDK...
+==> default: ok
+==> default: checking for jar in Boot JDK...
+==> default: ok
+==> default: checking for rmic in Boot JDK...
+==> default: ok
+==> default: checking for native2ascii in Boot JDK...
+==> default: ok
+==> default: checking for jtreg...
+==> default: no
+==> default: checking for gcc...
+==> default: /usr/bin/gcc
+==> default: configure: Resolving CC (as /usr/bin/gcc) failed, using /usr/bin/gcc directly.
+==> default: checking resolved symbolic links for CC...
+==> default: /usr/bin/gcc-4.6
+==> default: checking if CC is disguised ccache...
+==> default: no, keeping CC
+==> default: configure: Using gcc-4.6 (Ubuntu/Linaro 4.6.3-1ubuntu5) C compiler version 4.6.3 (located at /usr/bin/gcc-4.6)
+==> default: checking whether the C compiler works...
+==> default: yes
+==> default: checking for C compiler default output file name...
+==> default: a.out
+==> default: checking for suffix of executables...
+==> default: checking whether we are cross compiling...
+==> default: no
+==> default: checking for suffix of object files...
+==> default: o
+==> default: checking whether we are using the GNU C compiler...
+==> default: yes
+==> default: checking whether /usr/bin/gcc-4.6 accepts -g...
+==> default: yes
+==> default: checking for /usr/bin/gcc-4.6 option to accept ISO C89...
+==> default: none needed
+==> default: checking for g++...
+==> default: /usr/bin/g++
+==> default: configure: Resolving CXX (as /usr/bin/g++) failed, using /usr/bin/g++ directly.
+==> default: checking resolved symbolic links for CXX...
+==> default: /usr/bin/g++-4.6
+==> default: checking if CXX is disguised ccache...
+==> default: no, keeping CXX
+==> default: configure: Using g++-4.6 (Ubuntu/Linaro 4.6.3-1ubuntu5) C++ compiler version 4.6.3 (located at /usr/bin/g++-4.6)
+==> default: checking whether we are using the GNU C++ compiler...
+==> default: yes
+==> default: checking whether /usr/bin/g++-4.6 accepts -g...
+==> default: yes
+==> default: checking for ar...
+==> default: ar
+==> default: configure: Rewriting AR to "/usr/bin/ar"
+==> default: checking how to run the C preprocessor...
+==> default: /usr/bin/gcc-4.6 -E
+==> default: configure: Resolving CPP (as /usr/bin/gcc-4.6) failed, using /usr/bin/gcc-4.6 directly.
+==> default: checking how to run the C++ preprocessor...
+==> default: /usr/bin/g++-4.6 -E
+==> default: configure: Resolving CXXCPP (as /usr/bin/g++-4.6) failed, using /usr/bin/g++-4.6 directly.
+==> default: checking for nm...
+==> default: nm
+==> default: configure: Rewriting NM to "/usr/bin/nm"
+==> default: checking for strip...
+==> default: strip
+==> default: configure: Rewriting STRIP to "/usr/bin/strip"
+==> default: checking for gobjcopy...
+==> default: no
+==> default: checking for objcopy...
+==> default: objcopy
+==> default: configure: Rewriting OBJCOPY to "/usr/bin/objcopy"
+==> default: checking for gobjdump...
+==> default: no
+==> default: checking for objdump...
+==> default: objdump
+==> default: configure: Rewriting OBJDUMP to "/usr/bin/objdump"
+==> default: checking for ANSI C header files...
+==> default: yes
+==> default: checking for sys/types.h...
+==> default: yes
+==> default: checking for sys/stat.h...
+==> default: yes
+==> default: checking for stdlib.h...
+==> default: yes
+==> default: checking for string.h...
+==> default: yes
+==> default: checking for memory.h...
+==> default: yes
+==> default: checking for strings.h...
+==> default: yes
+==> default: checking for inttypes.h...
+==> default: yes
+==> default: checking for stdint.h...
+==> default: yes
+==> default: checking for unistd.h...
+==> default: yes
+==> default: checking stdio.h usability...
+==> default: yes
+==> default: checking stdio.h presence...
+==> default: yes
+==> default: checking for stdio.h...
+==> default: yes
+==> default: checking size of int *...
+==> default: 4
+==> default: checking for target address size...
+==> default: 32 bits
+==> default: checking whether byte ordering is bigendian...
+==> default: no
+==> default: checking if compiler supports "-m32"...
+==> default: yes
+==> default: checking if compiler supports "-m32"...
+==> default: yes
+==> default: checking if we should generate debug symbols...
+==> default: true
+==> default: checking if we should zip debug-info files...
+==> default: yes
+==> default: checking what is not needed on Linux?...
+==> default: pulse
+==> default: checking for Mac OS X Java Framework...
+==> default: no
+==> default: checking for X...
+==> default: libraries , headers
+==> default: checking for gethostbyname...
+==> default: yes
+==> default: checking for connect...
+==> default: yes
+==> default: checking for remove...
+==> default: yes
+==> default: checking for shmat...
+==> default: yes
+==> default: checking for IceConnectionNumber in -lICE...
+==> default: yes
+==> default: checking for X11/extensions/shape.h...
+==> default: yes
+==> default: checking for X11/extensions/Xrender.h...
+==> default: yes
+==> default: checking for X11/extensions/XTest.h...
+==> default: yes
+==> default: checking for X11/Intrinsic.h...
+==> default: yes
+==> default: checking cups/cups.h usability...
+==> default: yes
+==> default: checking cups/cups.h presence...
+==> default: yes
+==> default: checking for cups/cups.h...
+==> default: yes
+==> default: checking cups/ppd.h usability...
+==> default: yes
+==> default: checking cups/ppd.h presence...
+==> default: yes
+==> default: checking for cups/ppd.h...
+==> default: yes
+==> default: configure: Found freetype include files at /usr/include using well-known location
+==> default: configure: Could not find /usr/lib/libfreetype.so. Ignoring location.
+==> default: configure: Found freetype include files at /usr/include using well-known location
+==> default: checking for freetype includes...
+==> default: /usr/include
+==> default: checking for freetype libraries...
+==> default: /usr/lib/i386-linux-gnu
+==> default: checking if we can compile and link with freetype...
+==> default: yes
+==> default: checking if we should bundle freetype...
+==> default: no
+==> default: checking for ALSA...
+==> default: checking alsa/asoundlib.h usability...
+==> default: yes
+==> default: checking alsa/asoundlib.h presence...
+==> default: yes
+==> default: checking for alsa/asoundlib.h...
+==> default: yes
+==> default: checking for main in -ljpeg...
+==> default: no
+==> default: configure: Will use jpeg decoder bundled with the OpenJDK source
+==> default: checking for which giflib to use...
+==> default: bundled
+==> default: checking for compress in -lz...
+==> default: yes
+==> default: checking for which zlib to use...
+==> default: bundled
+==> default: checking for cos in -lm...
+==> default: yes
+==> default: checking for dlopen in -ldl...
+==> default: yes
+==> default: checking if dynamic link of stdc++ is possible...
+==> default: yes
+==> default: checking if static link of stdc++ is possible...
+==> default: yes
+==> default: checking how to link with libstdc++...
+==> default: static
+==> default: checking if elliptic curve crypto implementation is present...
+==> default: yes
+==> default: checking for number of cores...
+==> default: 1
+==> default: checking for memory size...
+==> default: 2013 MB
+==> default: checking for appropriate number of jobs to run in parallel...
+==> default: 1
+==> default: checking whether to use sjavac...
+==> default: no
+==> default: checking that precompiled headers work...
+==> default: yes
+==> default: checking for ccache...
+==> default: /usr/bin/ccache
+==> default: checking if ccache supports precompiled headers...
+==> default: yes
+==> default: checking if C-compiler supports ccache precompiled headers...
+==> default: yes
+==> default: checking if build directory is on local disk...
+==> default: yes
+==> default: configure: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/config.status
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/spec.gmk
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot-spec.gmk
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/bootcycle-spec.gmk
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/compare.sh
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/spec.sh
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/Makefile
+==> default: config.status: creating /home/vagrant/jdk8/build/linux-x86-normal-server-release/config.h
+==> default: ====================================================
+==> default: A new configuration has been successfully created in
+==> default: /home/vagrant/jdk8/build/linux-x86-normal-server-release
+==> default: using default settings.
+==> default: Configuration summary:
+==> default: * Debug level:    release
+==> default: * JDK variant:    normal
+==> default: * JVM variants:   server
+==> default: * OpenJDK target: OS: linux, CPU architecture: x86, address length: 32
+==> default: Tools summary:
+==> default: * Boot JDK:       java version "1.7.0_79" OpenJDK Runtime Environment (IcedTea 2.5.5) (7u79-2.5.5-0ubuntu0.12.04.1) OpenJDK Client VM (build 24.79-b02, mixed mode, sharing)  (at /usr/lib/jvm/java-7-openjdk-i386)
+==> default: * C Compiler:     gcc-4.6 (Ubuntu/Linaro 4.6.3-1ubuntu5) version 4.6.3 (at /usr/bin/gcc-4.6)
+==> default: * C++ Compiler:   g++-4.6 (Ubuntu/Linaro 4.6.3-1ubuntu5) version 4.6.3 (at /usr/bin/g++-4.6)
+==> default: Build performance summary:
+==> default: * Cores to use:   1
+==> default: * Memory limit:   2013 MB
+==> default: * ccache status:  installed and in use
+==> default: Building OpenJDK for target 'images' in configuration 'linux-x86-normal-server-release'
+==> default: ## Starting langtools
+==> default: Compiling 2 files for BUILD_TOOLS
+==> default: Compiling 31 properties into resource bundles
+==> default: Compiling 777 files for BUILD_BOOTSTRAP_LANGTOOLS
+==> default: Creating langtools/dist/bootstrap/lib/javac.jar
+==> default: Compiling 780 files for BUILD_FULL_JAVAC
+==> default: Creating langtools/dist/lib/classes.jar
+==> default: Updating langtools/dist/lib/src.zip
+==> default: ## Finished langtools (build time 00:00:49)
+==> default: ## Starting hotspot
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Creating Makefile ...
+==> default: Creating directory list ../shared_dirs.lst
+==> default: Creating flags.make ...
+==> default: Creating flags_vm.make ...
+==> default: Creating vm.make ...
+==> default: Creating adlc.make ...
+==> default: Creating jvmti.make ...
+==> default: Creating trace.make ...
+==> default: Creating sa.make ...
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Creating Makefile ...
+==> default: Creating flags.make ...
+==> default: Creating flags_vm.make ...
+==> default: Creating vm.make ...
+==> default: Creating adlc.make ...
+==> default: Creating jvmti.make ...
+==> default: Creating trace.make ...
+==> default: Creating sa.make ...
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Creating Makefile ...
+==> default: Creating flags.make ...
+==> default: Creating flags_vm.make ...
+==> default: Creating vm.make ...
+==> default: Creating adlc.make ...
+==> default: Creating jvmti.make ...
+==> default: Creating trace.make ...
+==> default: Creating sa.make ...
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Creating Makefile ...
+==> default: Creating flags.make ...
+==> default: Creating flags_vm.make ...
+==> default: Creating vm.make ...
+==> default: Creating adlc.make ...
+==> default: Creating jvmti.make ...
+==> default: Creating trace.make ...
+==> default: Creating sa.make ...
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/adlparse.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/archDesc.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/arena.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/dfa.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/dict2.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/filebuff.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/forms.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/formsopt.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/formssel.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/main.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/opcodes.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/output_c.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/adlc/output_h.cpp
+==> default: Making adlc
+==> default: warning: [options] bootstrap class path not set in conjunction with -source 1.6
+==> default: 1 warning
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/jvmtifiles/jvmtiEnv.hpp
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/jvmtifiles/jvmtiEnter.cpp
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/jvmtifiles/jvmtiEnterTrace.cpp
+==> default: warning: [options] bootstrap class path not set in conjunction with -source 1.6
+==> default: 1 warning
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/jvmtifiles/jvmtiEnvRecommended.cpp
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/jvmtifiles/bytecodeInterpreterWithChecks.cpp
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/jvmtifiles/jvmti.h
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/tracefiles/traceEventClasses.hpp
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/tracefiles/traceEventIds.hpp
+==> default: Generating /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/tracefiles/traceTypes.hpp
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Making /home/vagrant/jdk8/build/linux-x86-normal-server-release/hotspot/linux_i486_compiler2/product/../generated/sa-jdi.jar
+==> default: warning: [options] bootstrap class path not set in conjunction with -source 1.6
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: 1 warning
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Generating precompiled header precompiled.hpp.gch
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/abstractCompiler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/accessFlags.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_clone.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_expand.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_format.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_gen.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_misc.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_peephole.cpp
+==> default: Compiling ../generated/adfiles/ad_x86_32_pipeline.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/adaptiveFreeList.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/adaptiveSizePolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/addnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/adjoiningGenerations.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/adjoiningVirtualSpaces.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/advancedThresholdPolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/ageTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_interface/allocTracer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/allocation.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/allocationStats.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/altHashing.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/annotations.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/arguments.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/array.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/arrayKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/arrayOop.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/asPSOldGen.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/asPSYoungGen.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parNew/asParNewGeneration.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/asm/assembler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os_cpu/linux_x86/vm/assembler_linux_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/assembler_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/atomic.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/attachListener.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/attachListener_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/barrierSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/basicLock.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/bcEscapeAnalyzer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/biasedLocking.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/binaryTreeDictionary.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/bitMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/block.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/blockOffsetTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/buildOopMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/bytecode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/bytecodeAssembler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/bytecodeHistogram.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/bytecodeInfo.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/bytecodeInterpreter.cpp
+==> default: Compiling ../generated/jvmtifiles/bytecodeInterpreterWithChecks.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/bytecodeInterpreter_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/bytecodeStream.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/bytecodeTracer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/bytecodes.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/bytecodes_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_CFGPrinter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Canonicalizer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_CodeStubs_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Compilation.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Compiler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Defs.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_FpuStackSim_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_FrameMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_FrameMap_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_GraphBuilder.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_IR.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Instruction.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_InstructionPrinter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_LIR.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_LIRAssembler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_LIRAssembler_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_LIRGenerator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_LIRGenerator_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_LinearScan.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_LinearScan_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_MacroAssembler_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Optimizer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_RangeCheckElimination.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_Runtime1.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c1_Runtime1_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_ValueMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_ValueSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_ValueStack.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_ValueType.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/c1/c1_globals.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/c2_globals.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/c2_init_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/c2compiler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/cSpaceCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/callGenerator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/callnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/cardTableExtension.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/cardTableModRefBS.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/cardTableRS.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/cfgnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/chaitin.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciArrayKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciBaseObject.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciCallSite.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciConstant.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciConstantPoolCache.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciEnv.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciExceptionHandler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciField.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciFlags.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciInstance.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciInstanceKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciMemberName.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciMetadata.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciMethod.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciMethodBlocks.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciMethodData.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciMethodHandle.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciNullObject.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciObjArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciObjArrayKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciObject.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciObjectFactory.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciReplay.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciSignature.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciStreams.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciSymbol.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciType.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciTypeArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciTypeArrayKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciTypeFlow.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/ci/ciUtilities.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/classFileError.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/classFileParser.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/classFileStream.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/classLoader.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/classLoaderData.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/classLoadingService.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/classes.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/cmsAdaptiveSizePolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/cmsCollectorPolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/cmsGCAdaptivePolicyCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/cmsLockVerifier.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/coalesce.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/codeBlob.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/asm/codeBuffer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/codeCache.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_interface/collectedHeap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/collectionSetChooser.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/collectorCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/collectorPolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/compactibleFreeListSpace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/compilationPolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/compile.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/compileBroker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/compileLog.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/compiledIC.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/compiledICHolder.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/compiledIC_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/compilerOracle.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/compressedStream.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/concurrentG1Refine.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/concurrentG1RefineThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/concurrentGCThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/concurrentMark.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/concurrentMarkSweepGeneration.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/concurrentMarkSweepThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/concurrentMarkThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/connode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/constMethod.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/constantPool.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/constantTag.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/copy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/cpCache.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/cppInterpreter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/cppInterpreter_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/debug.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/debugInfo.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/debugInfoRec.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/debug_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/decoder.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/decoder_elf.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/decoder_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/defNewGeneration.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/defaultMethods.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/deoptimization.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/depChecker_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/dependencies.cpp
+==> default: Compiling ../generated/adfiles/dfa_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/diagnosticArgument.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/diagnosticCommand.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/diagnosticFramework.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/libadt/dict.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/dictionary.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/dirtyCardQueue.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/disassembler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/divnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/doCall.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/domgraph.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/dtraceAttacher.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/dtraceJSDT.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/dtraceJSDT_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/elfFile.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/elfStringTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/elfSymbolTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/errorReporter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/escape.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/events.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/evmCompat.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/exceptionHandlerTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/exceptions.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/fieldDescriptor.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/fieldType.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/filemap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/forte.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/fprofiler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/frame.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/frame_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/freeBlockDictionary.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/freeChunk.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/freeList.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1AllocRegion.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1BiasedArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1BlockOffsetTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1CardCounts.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1CollectedHeap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1CollectorPolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1ErgoVerbose.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1GCPhaseTimes.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1HRPrinter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1HotCardCache.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1Log.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1MMUTracker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1MarkSweep.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/g1MemoryPool.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1MonitoringSupport.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1RemSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1RemSetSummary.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1SATBCardTableModRefBS.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/g1_globals.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gSpaceCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcAdaptivePolicyCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_interface/gcCause.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/gcLocker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/gcNotifier.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcPolicyCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcStats.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/gcTaskManager.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/gcTaskThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcTimer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcTrace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcTraceSend.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcTraceTime.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/gcUtil.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/gcm.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/genCollectedHeap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/genMarkSweep.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/genRemSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/generateOopMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/generateOptoStub.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/generation.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/generationCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/generationSizer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/generationSpec.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/globalDefinitions.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/globals.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/graphKit.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/growableArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/hSpaceCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/handles.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/hashtable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/heap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/heapDumper.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/heapInspection.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/heapRegion.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/heapRegionRemSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/heapRegionSeq.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/heapRegionSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/heapRegionSets.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/histogram.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/icBuffer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/icBuffer_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/icache.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/icache_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/idealGraphPrinter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/idealKit.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/ifg.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/ifnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/immutableSpace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/indexSet.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/init.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/instanceClassLoaderKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/instanceKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/instanceMirrorKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/instanceOop.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/instanceRefKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/intHisto.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/interfaceSupport.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/interp_masm_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/interp_masm_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/interpreter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/interpreterRT_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/interpreter_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/invocationCounter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/iterator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/java.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/javaAssertions.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/javaCalls.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/javaClasses.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jni.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jniCheck.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jniFastGetField.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/jniFastGetField_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/jniHandles.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/jniPeriodicChecker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvm.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/jvm_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiClassFileReconstituter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiCodeBlobEvents.cpp
+==> default: Compiling ../generated/jvmtifiles/jvmtiEnter.cpp
+==> default: Compiling ../generated/jvmtifiles/jvmtiEnterTrace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiEnv.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiEnvBase.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiEnvThreadState.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiEventController.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiExport.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiExtensions.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiGetLoadedClasses.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiImpl.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiManageCapabilities.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiRawMonitor.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiRedefineClasses.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiTagMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiThreadState.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiTrace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/jvmtiUtil.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/klass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/klassVtable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/lcm.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/library_call.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/linkResolver.cpp
+==> default: Assembling /home/vagrant/jdk8/hotspot/src/os_cpu/linux_x86/vm/linux_x86_32.s
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/live.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/loaderConstraints.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/location.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/locknode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/loopPredicate.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/loopTransform.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/loopUnswitch.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/loopnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/loopopts.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/lowMemoryDetector.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/machnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/macro.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/macroAssembler_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/management.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/markOop.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/markSweep.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/matcher.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/mathexactnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memBaseline.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memPtr.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memRecorder.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/memRegion.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memReporter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memSnapshot.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memTrackWorker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memTracker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/memnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memoryManager.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memoryPool.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/memoryService.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/memprofiler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/metachunk.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/metadata.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/metadataOnStackMark.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/metaspace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/metaspaceCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/metaspaceShared.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/metaspaceShared_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/method.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/methodComparator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/methodCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/methodData.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/methodHandles.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/methodHandles_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/methodLiveness.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/monitorChunk.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/mulnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/multnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/mutableNUMASpace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/mutableSpace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/mutex.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/mutexLocker.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/mutex_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/nativeInst_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/nativeLookup.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/nmethod.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/nmtDCmd.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/node.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/numberSeq.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/objArrayKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/objArrayOop.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/objectCountEventSender.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/objectMonitor.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/objectStartArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/oop.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/oopFactory.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/compiler/oopMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/oopMapCache.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/oopRecorder.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/oopsHierarchy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/opcodes.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/orderAccess.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/os.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/osThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/osThread_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/os_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os_cpu/linux_x86/vm/os_linux_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/posix/vm/os_posix.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/ostream.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/output.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parNew/parCardTableModRefBS.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/parGCAllocBuffer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/parMarkBitMap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parNew/parNewGeneration.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/parallelScavengeHeap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/park.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/parse1.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/parse2.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/parse3.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/parseHelper.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/wbtestmethods/parserTests.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/pcDesc.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/pcTasks.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/perf.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/perfData.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/perfMemory.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/perfMemory_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/phase.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/phaseX.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/placeholders.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/libadt/port.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/postaloc.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/preserveException.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/privilegedStack.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/promotionInfo.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psAdaptiveSizePolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psCompactionManager.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psGCAdaptivePolicyCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psGenerationCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psMarkSweep.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psMarkSweepDecorator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/psMemoryPool.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psOldGen.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psParallelCompact.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psPromotionLAB.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psPromotionManager.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psScavenge.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psTasks.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psVirtualspace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/psYoungGen.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/ptrQueue.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/quickSort.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/referencePolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/referenceProcessor.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/reflection.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/reflectionUtils.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/reg_split.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/regalloc.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/asm/register.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/register_definitions_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/register_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/regmask.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/relocInfo.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/relocInfo_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/relocator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/resolutionErrors.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/resourceArea.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/rewriter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/rframe.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/rootnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/runtime.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/runtimeService.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/runtime_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/safepoint.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/satbQueue.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/scopeDesc.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/serviceThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/libadt/set.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/sharedHeap.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/sharedRuntime.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/sharedRuntimeTrans.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/sharedRuntimeTrig.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/sharedRuntime_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/signature.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/simpleThresholdPolicy.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/sizes.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/space.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/spaceCounters.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/spaceDecorator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/sparsePRT.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/specialized_oop_closures.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/split_if.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/stackMapFrame.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/stackMapTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/stackValue.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/stackValueCollection.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/statSampler.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/stringopts.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/stubCodeGenerator.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/stubGenerator_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/stubRoutines.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/stubRoutines_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/stubRoutines_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/stubRoutines_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/stubs.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/subnode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/superword.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/survRateGroup.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/sweeper.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/symbol.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/symbolTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/synchronizer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/systemDictionary.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/task.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/taskqueue.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/templateInterpreter.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/templateInterpreter_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/interpreter/templateTable.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/templateTable_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/tenuredGeneration.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/thread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/threadCritical_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os_cpu/linux_x86/vm/threadLS_linux_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/threadLocalAllocBuffer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/threadLocalStorage.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/services/threadService.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os_cpu/linux_x86/vm/thread_linux_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/ticks.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/timer.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/type.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/typeArrayKlass.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/oops/typeArrayOop.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/unhandledOops.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/memory/universe.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/unsafe.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/utf8.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/opto/vectornode.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/libadt/vectset.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/verificationType.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/verifier.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vframe.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vframeArray.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vframe_hp.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/virtualspace.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/concurrentMarkSweep/vmCMSOperations.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/vmError.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os/linux/vm/vmError_linux.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/shared/vmGCOperations.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/parallelScavenge/vmPSOperations.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vmStructs.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/classfile/vmSymbols.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vmThread.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vm_operations.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/gc_implementation/g1/vm_operations_g1.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/os_cpu/linux_x86/vm/vm_version_linux_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/vm_version_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/vmreg.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/vmreg_x86.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/code/vtableStubs.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/cpu/x86/vm/vtableStubs_x86_32.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/prims/whitebox.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/workgroup.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/xmlstream.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/utilities/yieldingWorkgroup.cpp
+==> default: Compiling /home/vagrant/jdk8/hotspot/src/share/vm/runtime/vm_version.cpp
+==> default: Linking vm...
+==> default: Making signal interposition lib...
+==> default: Making SA debugger back-end...
+==> default: **NOTICE** Dtrace support disabled: /usr/include/sys/sdt.h not found
+==> default: All done.
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: warning: [options] bootstrap class path not set in conjunction with -source 1.6
+==> default: 1 warning
+==> default: Generating linux_i486_docs/jvmti.html
+==> default: INFO: ENABLE_FULL_DEBUG_SYMBOLS=1
+==> default: INFO: ALT_OBJCOPY=/usr/bin/objcopy
+==> default: INFO: /usr/bin/objcopy cmd found so will create .debuginfo files.
+==> default: INFO: STRIP_POLICY=min_strip
+==> default: INFO: ZIP_DEBUGINFO_FILES=1
+==> default: ## Finished hotspot (build time 00:34:31)
+==> default: ## Starting corba
+==> default: Compiling 6 files for BUILD_LOGUTIL
+==> default: Creating corba/btjars/logutil.jar
+==> default: Compiling 141 files for BUILD_IDLJ
+==> default: Note: /home/vagrant/jdk8/corba/src/share/classes/com/sun/tools/corba/se/idl/som/idlemit/MetaPragma.java uses or overrides a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating corba/btjars/idlj.jar
+==> default: Compiling 1 files for BUILD_STRIPPROP
+==> default: Creating corba/btjars/stripproperties.jar
+==> default: Compiling 1495 files for BUILD_BOOTSTRAP_CORBA
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating corba/btjars/btcorba.jar
+==> default: Compiling 1495 files for BUILD_CORBA
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating corba/dist/lib/classes.jar
+==> default: Updating corba/dist/lib/src.zip
+==> default: Creating bin.zip
+==> default: ## Finished corba (build time 00:00:42)
+==> default: ## Starting jaxp
+==> default: Compiling 1887 files for BUILD_JAXP
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jaxp/dist/lib/classes.jar
+==> default: Updating jaxp/dist/lib/src.zip
+==> default: ## Finished jaxp (build time 00:00:26)
+==> default: ## Starting jaxws
+==> default: Compiling 2956 files for BUILD_JAXWS
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Compiling 24 files for BUILD_JAF
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jaxws/dist/lib/classes.jar
+==> default: Updating jaxws/dist/lib/src.zip
+==> default: ## Finished jaxws (build time 00:00:38)
+==> default: ## Starting jdk
+==> default: Importing CORBA classes.jar
+==> default: Importing JAXP classes.jar
+==> default: Importing JAXWS classes.jar
+==> default: Importing LANGTOOLS classes.jar
+==> default: Importing CORBA src.zip
+==> default: Importing JAXP src.zip
+==> default: Importing JAXWS src.zip
+==> default: Importing LANGTOOLS src.zip
+==> default: Importing CORBA bin.zip
+==> default: Compiling 162 files for BUILD_TOOLS
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Compiling 521 properties into resource bundles
+==> default: Copying and cleaning 53 properties
+==> default: Creating sun/util/LocaleDataMetaInfo.java from 421 found resources.
+==> default: Generating sun/misc/Version.java
+==> default: Generating sun/misc/Version.java compact1
+==> default: Generating sun/misc/Version.java compact2
+==> default: Generating sun/misc/Version.java compact3
+==> default: Generating charsetmapping classes
+==> default: Aliases:
+==> default: Table size 1024 (10 bits), shift 0, max chain depth 3
+==> default: Classes:
+==> default: Table size 32 (5 bits), shift 1, max chain depth 3
+==> default: Cache:
+==> default: Table size 32 (5 bits), shift 1, max chain depth 3
+==> default: Generating buffer classes
+==> default: Generating exceptions classes
+==> default: Generating icon classes
+==> default: Generating X11 wrapper (32-bit version)
+==> default: Verifying /home/vagrant/jdk8/build/linux-x86-normal-server-release/jdk/gensrc_x11wrappers/sizes.32.verification.tmp to /home/vagrant/jdk8/build/linux-x86-normal-server-release/jdk/gensrc_x11wrappers/sizes.32
+==> default: Generating beaninfo
+==> default: Generating Nimbus source files
+==> default: [Error] encoded value was less than 0: encode(-8.326673E-17, 5.0, 11.0, 16.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was greater than 3: encode(15.029411, 1.0, 14.0, 15.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was greater than 3: encode(15.029411, 1.0, 14.0, 15.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was greater than 3: encode(15.029411, 1.0, 14.0, 15.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was greater than 3: encode(15.029411, 1.0, 14.0, 15.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was greater than 3: encode(15.029411, 1.0, 14.0, 15.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] encoded value was greater than 3: encode(15.029411, 1.0, 14.0, 15.0)
+==> default: [Error] encoded value was less than 0: encode(-0.05882353, 1.0, 24.0, 25.0)
+==> default: [Error] Encountered Infinity: encode(-0.00877193, 0.0, 7.0, 7.0)
+==> default: Compiling 4 files for BUILD_BREAKITERATOR
+==> default: Generating HTML DTD file
+==> default: [Parsed DTD html32 in 50ms]
+==> default: Compiling 9416 files for BUILD_JDK
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Compiling 225 files for BUILD_SECURITY
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/e_pow.c: In function '__j__ieee754_pow':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/e_pow.c:149:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/e_sqrt.c: In function '__j__ieee754_sqrt':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/e_sqrt.c:174:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/s_ceil.c: In function 'jceil':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/s_ceil.c:81:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/s_floor.c: In function 'jfloor':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/s_floor.c:82:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/s_log1p.c: In function 'jlog1p':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/lang/fdlibm/src/s_log1p.c:132:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp: In member function 'void unpacker::read_file_header()':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp:733:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp: In member function 'void cpool::init(unpacker*, int*)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp:985:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp: In member function 'char* entry::string()':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp:3715:44: warning: format not a string literal and no format arguments [-Wformat-security]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/utils.cpp: In function 'int assert_failed(const char*)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/utils.cpp:84:28: warning: format not a string literal and no format arguments [-Wformat-security]
+==> default: /home/vagrant/jdk8/jdk/src/share/bin/parse_manifest.c: In function 'compute_cen':
+==> default: /home/vagrant/jdk8/jdk/src/share/bin/parse_manifest.c:236:7: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+==> default: /home/vagrant/jdk8/jdk/src/share/bin/parse_manifest.c:279:11: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/java/net/PlainDatagramSocketImpl.c: In function 'mcast_join_leave':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/java/net/PlainDatagramSocketImpl.c:2151:13: warning: pointer targets in passing argument 3 of 'getInet6Address_ipaddress' differ in signedness [-Wpointer-sign]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/net/net_util.h:71:12: note: expected 'char *' but argument is of type 'jbyte *'
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/net/net_util.c: In function 'NET_SockaddrToInetAddress':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/java/net/net_util.c:268:23: warning: comparison between pointer and integer [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/nio/ch/IOUtil.c: In function 'Java_sun_nio_ch_IOUtil_fdLimit':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/nio/ch/IOUtil.c:132:5: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/security/pkcs11/j2secmod_md.c: In function 'findFunction':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/security/pkcs11/j2secmod_md.c:42:9: warning: implicit declaration of function 'throwNullPointerException' [-Wimplicit-function-declaration]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/security/pkcs11/j2secmod_md.c: In function 'Java_sun_security_pkcs11_Secmod_nssLoadLibrary':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/security/pkcs11/j2secmod_md.c:71:9: warning: implicit declaration of function 'throwIOException' [-Wimplicit-function-declaration]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/security/ec/impl/mpi.c: In function 's_mp_fixup_reciprocal':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/security/ec/impl/mpi.c:2193:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/security/ec/impl/mpi.c:2193:51: warning: signed and unsigned type in conditional expression [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/security/ec/impl/mpi.c:2195:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/security/ec/impl/mpi.c: In function 's_mp_lshd':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/security/ec/impl/mpi.c:2980:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/ArrayTypeImpl.c: In function 'newInstance':
+==> default: /home/vagrant/jdk8/jdk/src/share/back/ArrayTypeImpl.c:124:19: warning: 'componentClass' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/ArrayTypeImpl.c:115:16: note: 'componentClass' was declared here
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c: In function 'jvmtiErrorText':
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:191:9: warning: case value '181' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:192:9: warning: case value '182' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:193:9: warning: case value '183' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:194:9: warning: case value '184' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:195:9: warning: case value '185' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:196:9: warning: case value '186' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:197:9: warning: case value '187' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:198:9: warning: case value '188' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:199:9: warning: case value '189' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:200:9: warning: case value '190' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:201:9: warning: case value '191' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:202:9: warning: case value '192' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:203:9: warning: case value '193' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:204:9: warning: case value '194' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:205:9: warning: case value '195' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:206:9: warning: case value '196' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:207:9: warning: case value '197' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:208:9: warning: case value '198' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:209:9: warning: case value '199' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:210:9: warning: case value '200' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:211:9: warning: case value '201' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:212:9: warning: case value '202' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:213:9: warning: case value '203' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:214:9: warning: case value '204' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:215:9: warning: case value '205' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/error_messages.c:216:9: warning: case value '206' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/eventHandler.c: In function 'eventHandler_createPermanentInternal':
+==> default: /home/vagrant/jdk8/jdk/src/share/back/eventHandler.c:1685:53: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/eventHandler.c: In function 'eventHandler_createInternalThreadOnly':
+==> default: /home/vagrant/jdk8/jdk/src/share/back/eventHandler.c:1694:53: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c: In function 'map2jdwpError':
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2251:9: warning: case value '181' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2202:9: warning: case value '182' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2203:9: warning: case value '183' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2205:9: warning: case value '184' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2252:9: warning: case value '185' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2253:9: warning: case value '186' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2223:9: warning: case value '187' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2197:9: warning: case value '188' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2225:9: warning: case value '189' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2227:9: warning: case value '190' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2229:9: warning: case value '191' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2231:9: warning: case value '192' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2233:9: warning: case value '193' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2235:9: warning: case value '194' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2237:9: warning: case value '195' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2239:9: warning: case value '196' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2241:9: warning: case value '197' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2243:9: warning: case value '198' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2245:9: warning: case value '199' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2247:9: warning: case value '200' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2185:9: warning: case value '201' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2193:9: warning: case value '202' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2128:9: warning: case value '203' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2190:9: warning: case value '204' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2141:9: warning: case value '205' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/back/util.c:2154:9: warning: case value '206' not in enumerated type 'jvmtiError' [-Wswitch]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/tracing/dtrace/JVM.c: In function 'Java_sun_tracing_dtrace_JVM_defineClass0':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/tracing/dtrace/JVM.c:292:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/instrument/JarFacade.c: In function 'doAttribute':
+==> default: /home/vagrant/jdk8/jdk/src/share/instrument/JarFacade.c:61:13: warning: implicit declaration of function 'isspace' [-Wimplicit-function-declaration]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c: In function 'getDiagnosticCommandArgumentInfoArray':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:58:3: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:58:40: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:68:5: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:68:5: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:85:7: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:90:3: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c: In function 'Java_sun_management_DiagnosticCommandImpl_getDiagnosticCommandInfo':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:120:33: warning: incompatible implicit declaration of built-in function 'malloc' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:130:7: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:138:11: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:153:11: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/management/DiagnosticCommandImpl.c:158:3: warning: incompatible implicit declaration of built-in function 'free' [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/share/demo/jvmti/hprof/hprof_init.c: In function 'connect_to_socket':
+==> default: /home/vagrant/jdk8/jdk/src/share/demo/jvmti/hprof/hprof_init.c:244:5: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/loops/ProcessPath.c: In function 'ProcessPath':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/loops/ProcessPath.c:846:42: warning: 'params[0]' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/loops/ProcessPath.c:786:12: note: 'params[0]' was declared here
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/pipe/ShapeSpanIterator.c: In function 'Java_sun_java2d_pipe_ShapeSpanIterator_appendPoly':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/pipe/ShapeSpanIterator.c:662:47: warning: 'yPoints' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_LoadLibrary.c:266:2: warning: type defaults to 'int' in declaration of 'getAwtLockFunctions_type' [-Wimplicit-int]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_LoadLibrary.c:272:2: warning: type defaults to 'int' in declaration of 'getAwtData_type' [-Wimplicit-int]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_LoadLibrary.c: In function 'AWT_OnLoad':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_LoadLibrary.c:113:13: warning: ignoring return value of 'realpath', declared with attribute warn_unused_result [-Wunused-result]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/opengl/OGLContext.c: In function 'Java_sun_java2d_opengl_OGLContext_getOGLIdString':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/java2d/opengl/OGLContext.c:1058:9: warning: implicit declaration of function 'jio_snprintf' [-Wimplicit-function-declaration]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11PMBlitLoops.c: In function 'Java_sun_java2d_x11_X11PMBlitLoops_nativeBlit':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11PMBlitLoops.c:63:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11PMBlitLoops.c: In function 'Java_sun_java2d_x11_X11PMBlitBgLoops_nativeBlitBg':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11PMBlitLoops.c:154:13: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDrawLine':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:228:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:234:44: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDrawRect':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:252:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:266:53: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:270:53: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDrawRoundRect':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:292:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:337:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:340:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:343:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:346:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:351:48: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:354:52: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:359:48: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:362:52: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDrawOval':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:381:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:396:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:400:42: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDrawArc':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:419:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:425:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDrawPoly':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:445:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:479:52: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:483:53: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XDoPath':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:572:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:612:121: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XFillRect':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:669:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:675:49: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XFillRoundRect':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:696:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:741:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:744:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:747:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:750:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:756:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:760:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:765:53: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XFillOval':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:783:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:823:57: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:826:42: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XFillArc':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:845:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:851:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_XFillPoly':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:870:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:895:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_X
+==> default: FillSpans':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:922:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:943:53: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c: In function 'Java_sun_java2d_x11_X11Renderer_devCopyArea':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11Renderer.c:974:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:59:0: warning: "MAX" redefined [enabled by default]
+==> default: /usr/include/i386-linux-gnu/sys/param.h:76:0: note: this is the location of the previous definition
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:60:0: warning: "MIN" redefined [enabled by default]
+==> default: /usr/include/i386-linux-gnu/sys/param.h:75:0: note: this is the location of the previous definition
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_X11SurfaceData_initSurface':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:513:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_XSurfaceData_XCreateGC':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1532:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1538:11: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_XSurfaceData_XResetClip':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1557:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_XSurfaceData_XSetClip':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1583:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_X11SurfaceData_XSetCopyMode':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1602:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_X11SurfaceData_XSetXorMode':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1617:31: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_X11SurfaceData_XSetForeground':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1632:33: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c: In function 'Java_sun_java2d_x11_XSurfaceData_XSetGraphicsExposures':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11SurfaceData.c:1647:40: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11TextRenderer_md.c: In function 'AWTDrawGlyphList':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/java2d/x11/X11TextRenderer_md.c:225:11: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c: In function 'performPoll':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c:702:9: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'uint32_t' [-Wformat]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c: In function 'wakeUp':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c:742:15: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c: In function 'Java_sun_awt_X11_XToolkit_waitForEvents':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c:680:18: warning: 'ret_timeout' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XToolkit.c:566:14: note: 'ret_timeout' was declared here
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c: In function 'isKPevent':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:836:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:836:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c: In function 'dumpKeysymArray':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:840:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:840:5: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'KeySym' [-Wformat]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:841:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:841:5: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'KeySym' [-Wformat]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:842:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:842:5: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'KeySym' [-Wformat]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:843:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:843:5: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'KeySym' [-Wformat]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c: In function 'handleKeyEventWithNumLockMask_New':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:858:13: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:861:13: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:868:13: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XWindow.c:871:13: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c: In function 'Java_sun_awt_X11_XlibWrapper_XkbGetMap':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c:498:12: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c: In function 'Java_sun_awt_X11_XlibWrapper_XkbTranslateKeyCode':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c:520:29: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c: In function 'Java_sun_awt_X11_XlibWrapper_IsXsunKPBehavior':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c:1213:9: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c: In function 'Java_sun_awt_X11_XlibWrapper_XKeycodeToKeysym':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c:1858:5: warning: 'XKeycodeToKeysym' is deprecated (declared at /usr/include/X11/Xlib.h:1695) [-Wdeprecated-declarations]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c: In function 'Java_sun_awt_X11_XlibWrapper_SetBitmapShape':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c:2257:5: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/xawt/XlibWrapper.c:2257:5: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_Font.c: In function 'awtJNI_GetFontData':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_Font.c:503:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_Font.c:614:23: warning: comparison between pointer and integer [enabled by default]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_Font.c: In function 'pDataDisposeMethod':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/awt_Font.c:685:13: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c: In function 'AddFontsToX11FontPath':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c:277:9: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c:277:9: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c: In function 'Java_sun_font_FontConfigManager_getFontConfig':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c:1294:50: warning: 'fcFontArr' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c:1119:16: note: 'fcFontArr' was declared here
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/gtk2_interface.c:67:0: warning: "MIN" redefined [enabled by default]
+==> default: /usr/include/i386-linux-gnu/sys/param.h:75:0: note: this is the location of the previous definition
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/gtk2_interface.c: In function 'gtk2_load':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/gtk2_interface.c:845:9: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/gtk2_interface.c:845:9: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/gtk2_interface.c:845:9: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/gtk2_interface.c:845:9: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/image/jpeg/imageioJPEG.c: In function 'Java_com_sun_imageio_plugins_jpeg_JPEGImageReader_readImage':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/image/jpeg/imageioJPEG.c:1831:11: warning: argument 'maxProgressivePass' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/image/jpeg/imageioJPEG.c: In function 'Java_com_sun_imageio_plugins_jpeg_JPEGImageWriter_writeImage':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/image/jpeg/imageioJPEG.c:2662:13: warning: variable 'scale' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/ArabicLayoutEngine.cpp: In member function 'virtual le_int32 ArabicOpenTypeLayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/ArabicLayoutEngine.cpp:107:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/ArabicLayoutEngine.cpp: In member function 'virtual le_int32 UnicodeArabicOpenTypeLayoutEngine::glyphPostProcessing(LEGlyphStorage&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/ArabicLayoutEngine.cpp:183:81: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/CanonShaping.cpp: In static member function 'static void CanonShaping::reorderMarks(const LEUnicode*, le_int32, le_bool, LEUnicode*, LEGlyphStorage&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/CanonShaping.cpp:65:85: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/CanonShaping.cpp:66:76: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c: In function 'setupBlitVector':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c:104:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c:117:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c: In function 'setupLCDBlitVector':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c:526:17: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c:555:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/DrawGlyphList.c:630:21: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/HangulLayoutEngine.cpp: In member function 'virtual le_int32 HangulOpenTypeLayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/HangulLayoutEngine.cpp:248:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/IndicLayoutEngine.cpp: In member function 'virtual le_int32 IndicOpenTypeLayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/IndicLayoutEngine.cpp:133:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/IndicRearrangementProcessor2.h: In constructor 'IndicRearrangementProcessor2::IndicRearrangementProcessor2(const LEReferenceTo<MorphSubtableHeader2>&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/IndicRearrangementProcessor2.h:83:54: warning: 'IndicRearrangementProcessor2::indicRearrangementSubtableHeader' will be initialized after [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/IndicRearrangementProcessor2.h:82:57: warning:   'LEReferenceToArrayOf<IndicRearrangementStateEntry2> IndicRearrangementProcessor2::entryTable' [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/IndicRearrangementProcessor2.cpp:46:1: warning:   when initialized here [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/KhmerLayoutEngine.cpp: In member function 'virtual le_int32 KhmerOpenTypeLayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/KhmerLayoutEngine.cpp:83:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp: In member function 'void LEGlyphStorage::allocateGlyphArray(le_int32, le_bool, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp:103:72: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp:112:75: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp: In member function 'le_int32 LEGlyphStorage::allocatePositions(LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp:162:83: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp: In member function 'le_int32 LEGlyphStorage::allocateAuxData(LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LEGlyphStorage.cpp:184:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LayoutEngine.cpp: In member function 'virtual le_int32 LayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LayoutEngine.cpp:294:76: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LayoutEngine.cpp:345:73: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc.cpp: In member function 'virtual ByteOffset LigatureSubstitutionProcessor::processStateEntry(LEGlyphStorage&, le_int32&, EntryTableIndex)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc.cpp:118:62: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc2.h: In constructor 'LigatureSubstitutionProcessor2::LigatureSubstitutionProcessor2(const LEReferenceTo<MorphSubtableHeader2>&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc2.h:92:54: warning: 'LigatureSubstitutionProcessor2::ligatureSubstitutionHeader' will be initialized after [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc2.h:84:15: warning:   'le_uint32 LigatureSubstitutionProcessor2::componentOffset' [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc2.cpp:50:1: warning:   when initialized here [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc2.cpp: In member function 'virtual le_uint16 LigatureSubstitutionProcessor2::processStateEntry(LEGlyphStorage&, le_int32&, EntryTableIndex2, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LigatureSubstProc2.cpp:123:64: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LookupProcessor.cpp: In constructor 'LookupProcessor::LookupProcessor(const LETableReference&, Offset, Offset, Offset, LETag, LETag, const FeatureMap*, le_int32, le_bool, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/LookupProcessor.cpp:213:82: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/MPreFixups.cpp: In constructor 'MPreFixups::MPreFixups(le_int32)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/MPreFixups.cpp:47:71: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/MPreFixups.cpp: In member function 'void MPreFixups::apply(LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/MPreFixups.cpp:95:84: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/MPreFixups.cpp:96:82: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/OpenTypeLayoutEngine.cpp: In member function 'virtual le_int32 OpenTypeLayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/OpenTypeLayoutEngine.cpp:325:73: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.h: In constructor 'StateTableProcessor2::StateTableProcessor2(const LEReferenceTo<MorphSubtableHeader2>&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.h:77:38: warning: 'StateTableProcessor2::stHeader' will be initialized after [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.h:69:15: warning:   'le_uint32 StateTableProcessor2::nClasses' [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.cpp:48:1: warning:   when initialized here [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.h:74:32: warning: 'StateTableProcessor2::classTable' will be initialized after [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.h:68:15: warning:   'le_uint16 StateTableProcessor2::format' [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/StateTableProcessor2.cpp:48:1: warning:   when initialized here [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/SubtableProcessor2.h: In constructor 'SubtableProcessor2::SubtableProcessor2(const LEReferenceTo<MorphSubtableHeader2>&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/SubtableProcessor2.h:61:47: warning: 'SubtableProcessor2::subtableHeader' will be initialized after [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/SubtableProcessor2.h:57:15: warning:   'le_uint32 SubtableProcessor2::length' [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/SubtableProcessor2.cpp:43:1: warning:   when initialized here [-Wreorder]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/SunLayoutEngine.cpp: In function 'void Java_sun_font_SunLayoutEngine_nativeLayout(JNIEnv*, jclass, jobject, jobject, jfloatArray, jint, jint, jcharArray, jint, jint, jint, jint, jint, jint, jint, jobject, jobject, jlong, jlong)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/SunLayoutEngine.cpp:198:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/ThaiLayoutEngine.cpp: In member function 'virtual le_int32 ThaiLayoutEngine::computeGlyphs(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/ThaiLayoutEngine.cpp:100:77: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/TibetanLayoutEngine.cpp: In member function 'virtual le_int32 TibetanOpenTypeLayoutEngine::characterProcessing(const LEUnicode*, le_int32, le_int32, le_int32, le_bool, LEUnicode*&, LEGlyphStorage&, LEErrorCode&)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/layout/TibetanLayoutEngine.cpp:89:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeStrikeDisposer_freeNativeScalerContext':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:53:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeFont_countGlyphs':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:205:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeStrike_getMaxGlyph':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:223:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeFont_getGlyphAdvance':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:235:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeFont_getGlyphImageNoDefault':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:274:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeFont_getGlyphImage':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:295:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c: In function 'Java_sun_font_NativeFont_getFontMetrics':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/font/X11FontScaler.c:316:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/freetypeScaler.c: In function 'Java_sun_font_FreetypeFontScaler_getGlyphVectorOutlineNative':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/freetypeScaler.c:1357:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/sunFont.c: In function 'freeLayoutTableCache':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/font/sunFont.c:350:7: warning: passing argument 1 of 'free' discards 'const' qualifier from pointer target type [enabled by default]
+==> default: /usr/include/stdlib.h:488:13: note: expected 'void *' but argument is of type 'const void *'
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c: In function 'Java_sun_font_FontConfigManager_getFontConfig':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c:1294:50: warning: 'fcFontArr' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/fontpath.c:1119:16: note: 'fcFontArr' was declared here
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/splashscreen/splashscreen_gfx_impl.c: In function 'initFormat':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/splashscreen/splashscreen_gfx_impl.c:305:34: warning: 'numBits' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/sun/awt/splashscreen/splashscreen_gfx_impl.c:305:34: warning: 'shift' may be used uninitialized in this function [-Wuninitialized]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c: In function 'SplashConvertStringAlloc':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c:80:5: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c:80:5: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c: In function 'SplashScreenThread':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c:742:9: warning: ignoring return value of 'pipe', declared with attribute warn_unused_result [-Wunused-result]
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c: In function 'sendctl':
+==> default: /home/vagrant/jdk8/jdk/src/solaris/native/sun/awt/splashscreen/splashscreen_sys.c:374:14: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp: In member function 'void unpacker::read_file_header()':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp:733:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp: In member function 'void cpool::init(unpacker*, int*)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp:985:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp: In member function 'char* entry::string()':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/unpack.cpp:3715:44: warning: format not a string literal and no format arguments [-Wformat-security]
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/utils.cpp: In function 'int assert_failed(const char*)':
+==> default: /home/vagrant/jdk8/jdk/src/share/native/com/sun/java/util/jar/pack/utils.cpp:84:28: warning: format not a string literal and no format arguments [-Wformat-security]
+==> default: Compiling 195 files for BUILD_BOOTSTRAP_RMIC
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Warning: generation and use of skeletons and static stubs for JRMP
+==> default: is deprecated. Skeletons are unnecessary, and static stubs have
+==> default: been superseded by dynamically generated stubs. Users are
+==> default: encouraged to migrate away from using rmic to generate skeletons and static
+==> default: stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+==> default: Warning: generation and use of skeletons and static stubs for JRMP
+==> default: is deprecated. Skeletons are unnecessary, and static stubs have
+==> default: been superseded by dynamically generated stubs. Users are
+==> default: encouraged to migrate away from using rmic to generate skeletons and static
+==> default: stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+==> default: Warning: generation and use of skeletons and static stubs for JRMP
+==> default: is deprecated. Skeletons are unnecessary, and static stubs have
+==> default: been superseded by dynamically generated stubs. Users are
+==> default: encouraged to migrate away from using rmic to generate skeletons and static
+==> default: stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+==> default: Warning: generation and use of skeletons and static stubs for JRMP
+==> default: is deprecated. Skeletons are unnecessary, and static stubs have
+==> default: been superseded by dynamically generated stubs. Users are
+==> default: encouraged to migrate away from using rmic to generate skeletons and static
+==> default: stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+==> default: Creating jdk/jce/unsigned/sunpkcs11.jar
+==> default: Creating jdk/jce/unsigned/sunec.jar
+==> default: Creating jdk/jce/unsigned/sunjce_provider.jar
+==> default: Creating jdk/jce/unsigned/jce.jar
+==> default: Creating jdk/jce/unsigned/policy/unlimited/US_export_policy.jar
+==> default: Creating jdk/jce/unsigned/policy/limited/local_policy.jar
+==> default: Creating jdk/jce/unsigned/policy/unlimited/local_policy.jar
+==> default: ## Finished jdk (build time 00:08:28)
+==> default: ## Starting demos
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_ArcTest
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_BarChart
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_Blink
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_CardTest
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_Clock
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_DitherTest
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_DrawTest
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_Fractal
+==> default: Compiling 2 files for BUILD_DEMO_APPLET_GraphicsTest
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_NervousText
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_SimpleGraph
+==> default: Compiling 5 files for BUILD_DEMO_APPLET_SortDemo
+==> default: Compiling 1 files for BUILD_DEMO_APPLET_SpreadSheet
+==> default: Compiling 3 files for BUILD_DEMO_CodePointIM
+==> default: Creating jdk/demo/jfc/CodePointIM/src.zip
+==> default: Updating jdk/demo/jfc/CodePointIM/src.zip
+==> default: Compiling 2 files for BUILD_DEMO_MoleculeViewer
+==> default: Creating jdk/demo/applets/MoleculeViewer/src.zip
+==> default: Updating jdk/demo/applets/MoleculeViewer/src.zip
+==> default: Compiling 2 files for BUILD_DEMO_WireFrame
+==> default: Creating jdk/demo/applets/WireFrame/src.zip
+==> default: Updating jdk/demo/applets/WireFrame/src.zip
+==> default: Compiling 1 files for BUILD_DEMO_SwingApplet
+==> default: Creating jdk/demo/jfc/SwingApplet/src.zip
+==> default: Updating jdk/demo/jfc/SwingApplet/src.zip
+==> default: Compiling 3 files for BUILD_DEMO_FileChooserDemo
+==> default: Note: /home/vagrant/jdk8/jdk/src/share/demo/jfc/FileChooserDemo/FileChooserDemo.java uses unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jdk/demo/jfc/FileChooserDemo/src.zip
+==> default: Updating jdk/demo/jfc/FileChooserDemo/src.zip
+==> default: Compiling 4 files for BUILD_DEMO_Font2DTest
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jdk/demo/jfc/Font2DTest/src.zip
+==> default: Updating jdk/demo/jfc/Font2DTest/src.zip
+==> default: Compiling 15 files for BUILD_DEMO_Metalworks
+==> default: Note: /home/vagrant/jdk8/jdk/src/share/demo/jfc/Metalworks/MetalworksPrefs.java uses unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jdk/demo/jfc/Metalworks/src.zip
+==> default: Updating jdk/demo/jfc/Metalworks/src.zip
+==> default: Compiling 2 files for BUILD_DEMO_Notepad
+==> default: Creating jdk/demo/jfc/Notepad/src.zip
+==> default: Updating jdk/demo/jfc/Notepad/src.zip
+==> default: Compiling 5 files for BUILD_DEMO_SampleTree
+==> default: Creating jdk/demo/jfc/SampleTree/src.zip
+==> default: Updating jdk/demo/jfc/SampleTree/src.zip
+==> default: Compiling 8 files for BUILD_DEMO_TableExample
+==> default: Note: /home/vagrant/jdk8/jdk/src/share/demo/jfc/TableExample/TableExample4.java uses unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jdk/demo/jfc/TableExample/src.zip
+==> default: Updating jdk/demo/jfc/TableExample/src.zip
+==> default: Compiling 1 files for BUILD_DEMO_TransparentRuler
+==> default: Creating jdk/demo/jfc/TransparentRuler/src.zip
+==> default: Updating jdk/demo/jfc/TransparentRuler/src.zip
+==> default: Compiling 3 files for BUILD_DEMO_jconsole-plugin
+==> default: Creating jdk/demo/scripting/jconsole-plugin/src.zip
+==> default: Updating jdk/demo/scripting/jconsole-plugin/src.zip
+==> default: Compiling 3 files for BUILD_DEMO_FullThreadDump
+==> default: Creating jdk/demo/management/FullThreadDump/src.zip
+==> default: Updating jdk/demo/management/FullThreadDump/src.zip
+==> default: Compiling 2 files for BUILD_DEMO_JTop
+==> default: Creating jdk/demo/management/JTop/src.zip
+==> default: Updating jdk/demo/management/JTop/src.zip
+==> default: Compiling 1 files for BUILD_DEMO_MemoryMonitor
+==> default: Creating jdk/demo/management/MemoryMonitor/src.zip
+==> default: Updating jdk/demo/management/MemoryMonitor/src.zip
+==> default: Compiling 2 files for BUILD_DEMO_VerboseGC
+==> default: Creating jdk/demo/management/VerboseGC/src.zip
+==> default: Updating jdk/demo/management/VerboseGC/src.zip
+==> default: Compiling 12 files for BUILD_DEMO_zipfs
+==> default: Note: /home/vagrant/jdk8/jdk/src/share/demo/nio/zipfs/src/com/sun/nio/zipfs/ZipUtils.java uses or overrides a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Creating jdk/demo/nio/zipfs/src.zip
+==> default: Updating jdk/demo/nio/zipfs/src.zip
+==> default: /home/vagrant/jdk8/jdk/src/share/demo/jvmti/compiledMethodLoad/compiledMethodLoad.c: In function 'print_inline_info_record':
+==> default: /home/vagrant/jdk8/jdk/src/share/demo/jvmti/compiledMethodLoad/compiledMethodLoad.c:146:13: warning: format '%lx' expects argument of type 'long unsigned int', but argument 3 has type 'int' [-Wformat]
+==> default: Updating jdk/demo/jvmti/compiledMethodLoad/src.zip
+==> default: Updating jdk/demo/jvmti/gctest/src.zip
+==> default: Compiling 1 files for BUILD_DEMO_JVMTI_heapTracker_JAVA
+==> default: Creating jdk/demo/jvmti/heapTracker/heapTracker.jar
+==> default: Updating jdk/demo/jvmti/heapTracker/src.zip
+==> default: Updating jdk/demo/jvmti/heapViewer/src.zip
+==> default: /home/vagrant/jdk8/jdk/src/share/demo/jvmti/hprof/hprof_init.c: In function 'connect_to_socket':
+==> default: /home/vagrant/jdk8/jdk/src/share/demo/jvmti/hprof/hprof_init.c:244:5: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+==> default: Updating jdk/demo/jvmti/hprof/src.zip
+==> default: Compiling 1 files for BUILD_DEMO_JVMTI_minst_JAVA
+==> default: Creating jdk/demo/jvmti/minst/minst.jar
+==> default: Updating jdk/demo/jvmti/minst/src.zip
+==> default: Compiling 1 files for BUILD_DEMO_JVMTI_mtrace_JAVA
+==> default: Creating jdk/demo/jvmti/mtrace/mtrace.jar
+==> default: Updating jdk/demo/jvmti/mtrace/src.zip
+==> default: Updating jdk/demo/jvmti/waiters/src.zip
+==> default: Updating jdk/demo/jvmti/versionCheck/src.zip
+==> default: ## Finished demos (build time 00:00:53)
+==> default: ## Starting nashorn
+==> default: Compiling 435 files for BUILD_NASHORN
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Compiling 111 files for BUILD_NASGEN
+==> default: Note: Some input files use or override a deprecated API.
+==> default: Note: Recompile with -Xlint:deprecation for details.
+==> default: Note: Some input files use unchecked or unsafe operations.
+==> default: Note: Recompile with -Xlint:unchecked for details.
+==> default: Running nasgen
+==> default: Creating version.properties
+==> default: Creating nashorn/dist/nashorn.jar
+==> default: ## Finished nashorn (build time 00:00:12)
+==> default: ## Starting images
+==> default: Creating images/lib/charsets.jar
+==> default: Creating images/lib/ext/cldrdata.jar
+==> default: Creating images/lib/ext/dnsns.jar
+==> default: Creating images/lib/ext/localedata.jar
+==> default: Creating images/lib/jsse.jar
+==> default: WARNING: Path does not exist as file or directory: javax/swing/text/AbstractDocument$InsertStringResult.class
+==> default: WARNING: Path does not exist as file or directory: sun/awt/X11/XErrorHandler$XErrorHandlerWithFlag.class
+==> default: WARNING: Path does not exist as file or directory: sun/awt/X11/XErrorHandler$XShmAttachHandler.class
+==> default: WARNING: Path does not exist as file or directory: sun/dc/DuctusRenderingEngine.class
+==> default: WARNING: Path does not exist as file or directory: sun/dc/path/PathConsumer.class
+==> default: WARNING: Path does not exist as file or directory: sun/dc/pr/PathDasher.class
+==> default: WARNING: Path does not exist as file or directory: sun/dc/pr/PathDasher$1.class
+==> default: WARNING: Path does not exist as file or directory: sun/dc/pr/PathStroker.class
+==> default: WARNING: Path does not exist as file or directory: sun/dc/pr/PathStroker$1.class
+==> default: WARNING: Path does not exist as file or directory: sun/font/T2KFontScaler.class
+==> default: WARNING: Path does not exist as file or directory: sun/font/T2KFontScaler$1.class
+==> default: WARNING: Path does not exist as file or directory: sun/misc/PostVMInitHook.class
+==> default: WARNING: Path does not exist as file or directory: com/sun/crypto/provider
+==> default: WARNING: Path does not exist as file or directory: com/sun/java/accessibility
+==> default: WARNING: Path does not exist as file or directory: javax/crypto
+==> default: WARNING: Path does not exist as file or directory: sun/security/ec
+==> default: WARNING: Path does not exist as file or directory: sun/security/internal
+==> default: WARNING: Path does not exist as file or directory: sun/security/mscapi
+==> default: WARNING: Path does not exist as file or directory: sun/security/pkcs11
+==> default: WARNING: Path does not exist as file or directory: com/oracle/jrockit/jfr
+==> default: WARNING: Path does not exist as file or directory: oracle/jrockit/jfr
+==> default: WARNING: Path does not exist as file or directory: jdk/jfr
+==> default: Creating rt.jar Compressed=false
+==> default: Creating resources.jar
+==> default: Creating images/lib/jconsole.jar
+==> default: Creating images/lib/dt.jar
+==> default: Creating images/lib/tools.jar
+==> default: warning: package javax.crypto does not exist
+==> default: warning: package javax.crypto.interfaces does not exist
+==> default: warning: package javax.crypto.spec does not exist
+==> default: warning: package javax.tools.annotation does not exist
+==> default: warning: package com.oracle.nio does not exist
+==> default: Using boot class path = [/home/vagrant/jdk8/build/linux-x86-normal-server-release/images/lib/rt.jar, /home/vagrant/jdk8/build/linux-x86-normal-server-release/langtools/dist/bootstrap/lib/javac.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jfr.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/classes, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/icedtea-sound.jar, /usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/java-atk-wrapper.jar]
+==> default: Ignoring (other) com.sun.management.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.net.httpserver.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.net.httpserver.spi.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.nio.sctp.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.security.auth.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.security.auth.callback.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.security.auth.login.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.security.auth.module.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) com.sun.security.jgss.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: Ignoring (other) javax.xml.ws.wsaddressing.package-info : <any>
+==> default:    ClassSymbol <any>
+==> default: 5 warnings
+==> default: Creating images/lib/ct.sym
+==> default: Updating images/src.zip
+==> default: Updating images/sec-bin.zip
+==> default: ## Finished images (build time 00:00:49)
+==> default: ----- Build times -------
+==> default: Start 2015-05-01 20:04:30
+==> default: End   2015-05-01 20:51:58
+==> default: 00:00:42 corba
+==> default: 00:00:53 demos
+==> default: 00:34:31 hotspot
+==> default: 00:00:49 images
+==> default: 00:00:26 jaxp
+==> default: 00:00:38 jaxws
+==> default: 00:08:28 jdk
+==> default: 00:00:49 langtools
+==> default: 00:00:12 nashorn
+==> default: 00:47:28 TOTAL
+==> default: -------------------------
+==> default: Finished building OpenJDK for target 'images'
