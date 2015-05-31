@@ -1,2 +1,4 @@
+.vagrant
+src
 .idea
 .DS_Store
