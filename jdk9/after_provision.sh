@@ -4,4 +4,3 @@ sudo apt-get install unzip zip build-essential libX11-dev libxext-dev libxrender
 cd ~/jdk9
 sh get_source.sh
 bash configure --disable-warnings-as-errors
-make all

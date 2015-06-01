@@ -40,7 +40,39 @@ Get get_source.sh in order to download all OpenJDK 8 sources.
 
 Run bash configure to ensure its all ready for the build.
 
-Run make images.
+The next step will be manual.
+
+Run vagrant ssh:
+
+```
+$ vagrant ssh
+```
+
+select the source code directory
+
+```
+$ cd /home/vagrant/jdk9
+```
+
+Run make clean images to generate the JDK9 latest build.
+
+```
+$ make clean images LOG=debug
+```
+
+This may take up to two hours.
+
+```
+----- Build times -------
+Start 2015-06-01 14:46:24
+End   2015-06-01 16:55:21
+00:01:51 verify-modules
+02:08:57 TOTAL
+-------------------------
+/bin/bash /home/vagrant/jdk9/common/bin/logger.sh /home/vagrant/jdk9/build/linux-x86_64-normal-server-release/build.log /usr/bin/printf "Finished building targets 'clean images' in configuration 'linux-x86_64-normal-server-release'\n"
+Finished building targets 'clean images' in configuration 'linux-x86_64-normal-server-release'
+make[1]: Leaving directory `/home/vagrant/jdk9'
+```
 
 License
 =======
